@@ -26,3 +26,10 @@ Route::view("about", "about");
 Route::view("contact", "contact");
 
 Route::get("createcontroller/{user}",[CreateController::class, "index"]);
+
+// view lesson
+//Route::view('view', 'view');
+Route::get('/view/{name}', function ($name) {
+    //echo $name;
+    return view('view', ['name'=> $name]);
+});
