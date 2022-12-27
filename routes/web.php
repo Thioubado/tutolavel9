@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CreateController;
 
+// call the controller
+use App\Http\Controllers\view;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,7 +32,9 @@ Route::get("createcontroller/{user}",[CreateController::class, "index"]);
 
 // view lesson
 //Route::view('view', 'view');
-Route::get('/view/{name}', function ($name) {
-    //echo $name;
-    return view('view', ['name'=> $name]);
-});
+// Route::get('/view/{name}', function ($name) {
+//     //echo $name;
+//     return view('view', ['name'=> $name]);
+// });
+// view route
+Route::get('view/{name}', [view::class, "loadView"]);
