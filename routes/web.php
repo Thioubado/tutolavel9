@@ -6,6 +6,9 @@ use App\Http\Controllers\CreateController;
 // call the controller
 use App\Http\Controllers\view;
 
+// call the submit form controller
+use App\Http\Controllers\SubmitFormController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -38,3 +41,7 @@ Route::get("createcontroller/{user}",[CreateController::class, "index"]);
 // });
 // view route
 Route::get('view/{name}', [view::class, "loadView"]);
+
+//Laravel 9 tutorial: Submit form
+Route::view('login','login');
+Route::post('submit',[SubmitFormController::class, 'index']);
