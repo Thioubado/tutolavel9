@@ -8,6 +8,7 @@ use App\Http\Controllers\view;
 
 // call the submit form controller
 use App\Http\Controllers\SubmitFormController;
+use App\Http\Controllers\SubmitController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,3 +46,7 @@ Route::get('view/{name}', [view::class, "loadView"]);
 //Laravel 9 tutorial: Submit form
 Route::view('login','login');
 Route::post('submit',[SubmitFormController::class, 'index']);
+
+//exercice du submit
+Route::view('loginpage', 'LoginBis');
+Route::post('submitbis', [SubmitController::class, 'getData']);
