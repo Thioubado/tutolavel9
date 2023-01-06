@@ -10,6 +10,9 @@ use App\Http\Controllers\view;
 use App\Http\Controllers\SubmitFormController;
 use App\Http\Controllers\SubmitController;
 
+//call the form validation
+use App\Http\Controllers\FormValidationController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -50,3 +53,7 @@ Route::post('submit',[SubmitFormController::class, 'index']);
 //exercice du submit
 Route::view('loginpage', 'LoginBis');
 Route::post('submitbis', [SubmitController::class, 'getData']);
+
+// form validation
+Route::post('formavalid', [FormValidationController::class, 'index']);
+Route::view('formvalid', 'formValidation');
