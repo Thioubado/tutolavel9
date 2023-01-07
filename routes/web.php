@@ -32,10 +32,10 @@ Route::get('/', function () {
 // Route::get('/about', function () {
 //     return view('about');
 // });
-Route::view("about", "about");
-Route::view("contact", "contact");
+Route::view("about", "pages.about");
+Route::view("contact", "pages.contact");
 
-Route::get("createcontroller/{user}",[CreateController::class, "index"]);
+Route::get("createcontroller/{user}", [CreateController::class, "index"]);
 
 // view lesson
 //Route::view('view', 'view');
@@ -47,8 +47,8 @@ Route::get("createcontroller/{user}",[CreateController::class, "index"]);
 Route::get('view/{name}', [view::class, "loadView"]);
 
 //Laravel 9 tutorial: Submit form
-Route::view('login','login');
-Route::post('submit',[SubmitFormController::class, 'index']);
+Route::view('login', 'login');
+Route::post('submit', [SubmitFormController::class, 'index']);
 
 //exercice du submit
 Route::view('loginpage', 'LoginBis');

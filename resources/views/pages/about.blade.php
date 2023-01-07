@@ -1,9 +1,9 @@
 @extends ('layouts.main')
 
 @section('title')
-    Welcome
+    About
 @endsection
 
 @section('main')
-    <h1>Welcome Page</h1>
+    <h1>About Page</h1>
 @endsection
