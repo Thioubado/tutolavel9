@@ -1,16 +1,14 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\CreateController;
-
-// call the controller
 use App\Http\Controllers\view;
-
+use Illuminate\Support\Facades\Route;
+// call the controller
+use App\Http\Controllers\TestController;
 // call the submit form controller
-use App\Http\Controllers\SubmitFormController;
+use App\Http\Controllers\CreateController;
 use App\Http\Controllers\SubmitController;
-
-//call the form validation
+// call the form validation
+use App\Http\Controllers\SubmitFormController;
 use App\Http\Controllers\FormValidationController;
 
 /*
@@ -22,35 +20,37 @@ use App\Http\Controllers\FormValidationController;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
+ */
 
 Route::get('/', function () {
-    //echo $name;
-    return view('welcome');
+	// echo $name;
+	return view('welcome');
 });
+
+Route::get('test', [TestController::class, 'test']);
 
 // Route::get('/about', function () {
 //     return view('about');
 // });
-Route::view("about", "pages.about");
-Route::view("contact", "pages.contact");
+Route::view('about', 'pages.about');
+Route::view('contact', 'pages.contact');
 
-Route::get("createcontroller/{user}", [CreateController::class, "index"]);
+Route::get('createcontroller/{user}', [CreateController::class, 'index']);
 
 // view lesson
-//Route::view('view', 'view');
+// Route::view('view', 'view');
 // Route::get('/view/{name}', function ($name) {
 //     //echo $name;
 //     return view('view', ['name'=> $name]);
 // });
 // view route
-Route::get('view/{name}', [view::class, "loadView"]);
+Route::get('view/{name}', [view::class, 'loadView']);
 
-//Laravel 9 tutorial: Submit form
+// Laravel 9 tutorial: Submit form
 Route::view('login', 'login');
 Route::post('submit', [SubmitFormController::class, 'index']);
 
-//exercice du submit
+// exercice du submit
 Route::view('loginpage', 'LoginBis');
 Route::post('submitbis', [SubmitController::class, 'getData']);
 
