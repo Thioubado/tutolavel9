@@ -50,3 +50,7 @@ Route::post('submitbis', [SubmitController::class, 'getData']);
 // form validation
 Route::post('formavalid', [FormValidationController::class, 'index']);
 Route::view('formvalid', 'formValidation');
+
+// groupemiddleware
+Route::view('groupemiddleware', 'pages.groupemiddleware');
+Route::view('noaccess', 'noaccess');
