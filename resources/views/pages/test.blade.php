@@ -1,9 +1,10 @@
 @extends ('layouts.main')
 
 @section('title')
-    Welcome
+    Test
 @endsection
 
 @section('main')
-    <h1>Welcome Page</h1>
+    <h1>Test Page</h1>
+    <p>Data: {{ $data }}</p>
 @endsection

@@ -1,0 +1,12 @@
+body {
+    font-family: 'Comic Sans MS', sans-serif;
+}
+
+nav {
+    flex: content;
+    justify-content: center;
+}
+a {
+    text-decoration: none;
+    color:maroon;
+}
