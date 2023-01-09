@@ -17,6 +17,9 @@
     <main>
         @yield('main')
     </main>
+
+    <hr>
+    Footer
 </body>
 
 </html>

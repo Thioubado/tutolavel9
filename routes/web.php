@@ -1,15 +1,15 @@
 <?php
 
+use App\Http\Controllers\CreateController;
+use App\Http\Controllers\FormValidationController;
+// call the controller
+use App\Http\Controllers\SubmitController;
+// call the submit form controller
+use App\Http\Controllers\SubmitFormController;
+use App\Http\Controllers\TestController;
+// call the form validation
 use App\Http\Controllers\view;
 use Illuminate\Support\Facades\Route;
-// call the controller
-use App\Http\Controllers\TestController;
-// call the submit form controller
-use App\Http\Controllers\CreateController;
-use App\Http\Controllers\SubmitController;
-// call the form validation
-use App\Http\Controllers\SubmitFormController;
-use App\Http\Controllers\FormValidationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,18 +22,11 @@ use App\Http\Controllers\FormValidationController;
 |
  */
 
-Route::get('/', function () {
-	// echo $name;
-	return view('welcome');
-});
-
-Route::get('test', [TestController::class, 'test']);
-
-// Route::get('/about', function () {
-//     return view('about');
-// });
+Route::view('/', 'welcome');
 Route::view('about', 'pages.about');
 Route::view('contact', 'pages.contact');
+
+Route::get('test', [TestController::class, 'test']);
 
 Route::get('createcontroller/{user}', [CreateController::class, 'index']);
 
