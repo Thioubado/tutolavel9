@@ -40,7 +40,7 @@ Route::get('createcontroller/{user}', [CreateController::class, 'index']);
 Route::get('view/{name}', [view::class, 'loadView']);
 
 // Laravel 9 tutorial: Submit form
-Route::view('login', 'login');
+//Route::view('login', 'login');
 Route::post('submit', [SubmitFormController::class, 'index']);
 
 // exercice du submit
@@ -50,3 +50,12 @@ Route::post('submitbis', [SubmitController::class, 'getData']);
 // form validation
 Route::post('formavalid', [FormValidationController::class, 'index']);
 Route::view('formvalid', 'formValidation');
+
+// what is middleware
+Route::view('groupemiddleware', 'pages.groupemiddleware');
+Route::view('noaccess', 'noaccess');
+
+// group middleware
+Route::group(['middleware' => ['protectedPage']], function(){
+    Route::view('login', 'login');
+});
