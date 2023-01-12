@@ -12,6 +12,8 @@ use App\Http\Controllers\view;
 use Illuminate\Support\Facades\Route;
 // call the controller UsersController
 use App\Http\Controllers\UsersController;
+//call the controller userwithmodel;
+use App\Http\Controllers\UsersWithModel;
 
 /*
 |--------------------------------------------------------------------------
@@ -64,3 +66,6 @@ Route::group(['middleware' => ['protectedPage']], function(){
 
 // Database configuration and Fetch
 Route::get('users', [UsersController::class, 'index']);
+
+// Database with model
+Route::get('userswithmodel', [UsersWithModel::class, 'getData']);

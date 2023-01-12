@@ -5,5 +5,6 @@
     <a href="test">Test</a>  |
     <a href="groupemiddleware">Goupe Middleware</a>  |
     <a href="users">Users</a>  |
+    <a href="userswithmodel">Users with model</a>  |
 </nav>
 <hr>
