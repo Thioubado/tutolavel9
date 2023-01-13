@@ -14,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UsersController;
 //call the controller userwithmodel;
 use App\Http\Controllers\UsersWithModel;
+// call the usesrHttpController
+use App\Http\Controllers\usesrHttpController;
 
 /*
 |--------------------------------------------------------------------------
@@ -69,3 +71,6 @@ Route::get('users', [UsersController::class, 'index']);
 
 // Database with model
 Route::get('userswithmodel', [UsersWithModel::class, 'getData']);
+
+// http method
+Route::get('usershttp',[UsesrHttpController::class, 'index']);
