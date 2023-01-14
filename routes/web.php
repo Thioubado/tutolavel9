@@ -16,6 +16,8 @@ use App\Http\Controllers\UsersController;
 use App\Http\Controllers\UsersWithModel;
 // call the usesrHttpController
 use App\Http\Controllers\usesrHttpController;
+// call HttpRequestController
+use App\Http\controllers\HttpRequestController;
 
 /*
 |--------------------------------------------------------------------------
@@ -74,3 +76,7 @@ Route::get('userswithmodel', [UsersWithModel::class, 'getData']);
 
 // http method
 Route::get('usershttp',[UsesrHttpController::class, 'index']);
+
+// http request
+Route::view('httprequest', 'pages.httprequest');
+Route::post('loginrequest', [HttpRequestController::class, 'index']);

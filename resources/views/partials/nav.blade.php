@@ -6,5 +6,6 @@
     <a href="groupemiddleware">Goupe Middleware</a>  |
     <a href="users">Users</a>  |
     <a href="userswithmodel">Users with model</a>  |
+    <a href="httprequest">Http request Method</a>  |
 </nav>
 <hr>
