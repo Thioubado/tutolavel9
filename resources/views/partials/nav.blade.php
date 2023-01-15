@@ -9,5 +9,6 @@
     <a href="httprequest">Http request Method</a>  |
     <a href="sessionlogin">Session Login</a>  |
     <a href="showlist">Show list</a>  |
+    <a href="pagination">Pagination with DB</a>  |
 </nav>
 <hr>

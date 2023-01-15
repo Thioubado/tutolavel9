@@ -22,6 +22,8 @@ use App\Http\Controllers\HttpRequestController;
 use App\Http\Controllers\SessionWithLoginController;
 // call the showlistcontroller
 use App\Http\Controllers\ShowListController;
+//call the paginatecontroller
+use App\Http\Controllers\PaginateController;
 
 /*
 |--------------------------------------------------------------------------
@@ -103,3 +105,6 @@ Route::get('/logout', function ()
 
 // showlist from db
 Route::get('showlist', [ShowListController::class, 'getData']);
+
+// paginate page
+Route::get('pagination', [PaginateController::class, 'pages']);
