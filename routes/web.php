@@ -17,9 +17,11 @@ use App\Http\Controllers\UsersWithModel;
 // call the usesrHttpController
 use App\Http\Controllers\usesrHttpController;
 // call HttpRequestController
-use App\Http\controllers\HttpRequestController;
+use App\Http\Controllers\HttpRequestController;
 // call the SessionWithLoginController
-use App\Http\controllers\SessionWithLoginController;
+use App\Http\Controllers\SessionWithLoginController;
+// call the showlistcontroller
+use App\Http\Controllers\ShowListController;
 
 /*
 |--------------------------------------------------------------------------
@@ -98,3 +100,6 @@ Route::get('/logout', function ()
     }
     return redirect('sessionlogin');
 });
+
+// showlist from db
+Route::get('showlist', [ShowListController::class, 'getData']);

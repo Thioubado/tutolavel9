@@ -8,5 +8,6 @@
     <a href="userswithmodel">Users with model</a>  |
     <a href="httprequest">Http request Method</a>  |
     <a href="sessionlogin">Session Login</a>  |
+    <a href="showlist">Show list</a>  |
 </nav>
 <hr>
