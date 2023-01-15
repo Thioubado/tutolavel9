@@ -7,5 +7,6 @@
     <a href="users">Users</a>  |
     <a href="userswithmodel">Users with model</a>  |
     <a href="httprequest">Http request Method</a>  |
+    <a href="sessionlogin">Session Login</a>  |
 </nav>
 <hr>

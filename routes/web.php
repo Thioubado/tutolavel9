@@ -18,6 +18,8 @@ use App\Http\Controllers\UsersWithModel;
 use App\Http\Controllers\usesrHttpController;
 // call HttpRequestController
 use App\Http\controllers\HttpRequestController;
+// call the SessionWithLoginController
+use App\Http\controllers\SessionWithLoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -80,3 +82,19 @@ Route::get('usershttp',[UsesrHttpController::class, 'index']);
 // http request
 Route::view('httprequest', 'pages.httprequest');
 Route::post('loginrequest', [HttpRequestController::class, 'index']);
+// Session Login
+Route::view('sessionlogin', 'pages.sessionLogin');
+Route::post('sessionwithlogin', [SessionWithLoginController::class, 'userLoginSession']);
+Route::view('profilesession', 'pages.profileSession');
+// Login
+
+
+// logout
+Route::get('/logout', function () 
+{
+    if(session()->has('first_name'))
+    {
+        session() -> pull('first_name');
+    }
+    return redirect('sessionlogin');
+});
