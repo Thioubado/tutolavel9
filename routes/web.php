@@ -10,6 +10,14 @@ use App\Http\Controllers\TestController;
 // call the form validation
 use App\Http\Controllers\view;
 use Illuminate\Support\Facades\Route;
+// call the controller UsersController
+use App\Http\Controllers\UsersController;
+//call the controller userwithmodel;
+use App\Http\Controllers\UsersWithModel;
+// call the usesrHttpController
+use App\Http\Controllers\usesrHttpController;
+// call HttpRequestController
+use App\Http\controllers\HttpRequestController;
 
 /*
 |--------------------------------------------------------------------------
@@ -59,3 +67,16 @@ Route::view('noaccess', 'noaccess');
 Route::group(['middleware' => ['protectedPage']], function(){
     Route::view('login', 'login');
 });
+
+// Database configuration and Fetch
+Route::get('users', [UsersController::class, 'index']);
+
+// Database with model
+Route::get('userswithmodel', [UsersWithModel::class, 'getData']);
+
+// http method
+Route::get('usershttp',[UsesrHttpController::class, 'index']);
+
+// http request
+Route::view('httprequest', 'pages.httprequest');
+Route::post('loginrequest', [HttpRequestController::class, 'index']);
