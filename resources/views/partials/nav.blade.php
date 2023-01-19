@@ -10,5 +10,6 @@
     <a href="sessionlogin">Session Login</a>  |
     <a href="showlist">Show list</a>  |
     <a href="pagination">Pagination with DB</a>  |
+    <a href="save">Save data in DB</a>  |
 </nav>
 <hr>

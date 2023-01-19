@@ -24,6 +24,8 @@ use App\Http\Controllers\SessionWithLoginController;
 use App\Http\Controllers\ShowListController;
 //call the paginatecontroller
 use App\Http\Controllers\PaginateController;
+// call the SaveDataInDBController
+use App\Http\Controllers\SaveDataInDBController;
 
 /*
 |--------------------------------------------------------------------------
@@ -108,3 +110,7 @@ Route::get('showlist', [ShowListController::class, 'getData']);
 
 // paginate page
 Route::get('pagination', [PaginateController::class, 'pages']);
+
+// route for save data in DB
+Route::view('save', 'pages.save');
+Route::post('save', [SaveDataInDBController::class, 'getData']);
