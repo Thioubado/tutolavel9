@@ -13,6 +13,6 @@
         <input type="text" name="prenom" placeholder="Entrez votre prénom"><br><br>
         <input type="text" name="email" placeholder="Entrez votre meilleur email"><br><br>
         <textarea name="adresse" placeholder="Entrez votre addresse"></textarea><br><br>
-        <button type="submit">Ajouter membre</button>
+        <button type="submit">Ajouter membre</button><br><br>
     </form>
 @endsection
