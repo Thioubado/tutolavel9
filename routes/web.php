@@ -26,6 +26,8 @@ use App\Http\Controllers\ShowListController;
 use App\Http\Controllers\PaginateController;
 // call the SaveDataInDBController
 use App\Http\Controllers\SaveDataInDBController;
+// call the deleController
+use App\Http\Controllers\DeleteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -114,3 +116,7 @@ Route::get('pagination', [PaginateController::class, 'pages']);
 // route for save data in DB
 Route::view('save', 'pages.save');
 Route::post('save', [SaveDataInDBController::class, 'getData']);
+
+// route for delete
+Route::get('montrer', [DeleteController::class, 'montrerData']);
+Route::get('delete/{id}', [DeleteController::class, 'supprimerData']);
