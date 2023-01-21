@@ -13,7 +13,7 @@ class SaveDataInDBController extends Controller
     public function getData(Request $req)
     {
         $user = new user;
-        $user -> id = $req -> id;
+        $user -> id = $req -> id=6;
         $user -> nom = $req -> nom;
         $user -> prenom = $req -> prenom;
         $user -> email = $req -> email;
