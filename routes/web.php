@@ -28,6 +28,8 @@ use App\Http\Controllers\PaginateController;
 use App\Http\Controllers\SaveDataInDBController;
 // call the deleController
 use App\Http\Controllers\DeleteController;
+// call the UpdateController
+use App\Http\Controllers\UpdateController;
 
 /*
 |--------------------------------------------------------------------------
@@ -120,3 +122,9 @@ Route::post('save', [SaveDataInDBController::class, 'getData']);
 // route for delete
 Route::get('montrer', [DeleteController::class, 'montrerData']);
 Route::get('delete/{id}', [DeleteController::class, 'supprimerData']);
+
+//route for update
+Route::get('editer', [UpdateController::class, 'editerData']);
+Route::get('delete/{id}', [UpdateController::class, 'deleteForUpdate']);
+Route::get('editpage/{id}', [UpdateController::class, 'editforDB']);
+Route::post('editpage', [UpdateController::class, 'showMeData']);
