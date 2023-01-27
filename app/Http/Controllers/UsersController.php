@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\User;
 
 //call database
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class UsersController extends Controller
@@ -13,6 +14,7 @@ class UsersController extends Controller
     //
     public function index()
     {
-        return DB::SELECT("select * from users");
+        $users = User::all();
+        return view('pages.user', compact('users'));
     }
 }
