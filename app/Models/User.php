@@ -15,15 +15,15 @@ class user extends Model {
 
 	public $timestamps = false;
 
-	public function getAll() {
-		return User::all();
-	}
-
+    /**
+     * Get 1 user randomly
+     */
 	public function getRandom() {
-		$users = $this->getAll();
+		$users = $this->all();
 		$faker = Factory::create();
-		Gc7::aff($users);
 
-		return $this->getAll();
+		// Gc7::aff($users);
+
+		return $faker->randomElements($users);
 	}
 }
