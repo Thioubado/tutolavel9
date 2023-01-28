@@ -6,5 +6,11 @@
 
 @section('main')
     <h1>Test Page</h1>
-    <p>Data: {{ $data }}</p>
+    <p style="text-align: center">
+        @php
+        echo $data
+        @endphp
+    </p>
+    <p>Data original:<br>
+    {{ $data }}</p>
 @endsection

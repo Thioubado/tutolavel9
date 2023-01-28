@@ -6,7 +6,7 @@ use App\Http\Tools\Gc7;
 
 class Gc7TestController extends Controller {
 	public function test() {
-		$data = 'A data from Gc7TestController';
+		$data = 'A data from Gc7TestController<br>See In messages in the Debugbar';
 
         Debugbar::info('Info');
         Debugbar::error('Error!');
