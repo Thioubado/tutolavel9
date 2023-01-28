@@ -5,10 +5,10 @@ use App\Models\User;
 
 // call database
 
-class UsersController extends Controller {
+class Gc7UsersController extends Controller {
 	public function index() {
 		$users = (new User())->getRandom();
 
-		return view('pages.user', compact('users'));
+		return view('gc7pages.user', compact('users'));
 	}
 }

@@ -1,35 +1,35 @@
 <?php
 
-use App\Http\Controllers\CreateController;
-use App\Http\Controllers\FormValidationController;
-// call the controller
-use App\Http\Controllers\SubmitController;
-// call the submit form controller
-use App\Http\Controllers\SubmitFormController;
-use App\Http\Controllers\TestController;
-// call the form validation
 use App\Http\Controllers\view;
 use Illuminate\Support\Facades\Route;
-// call the controller UsersController
-use App\Http\Controllers\UsersController;
-//call the controller userwithmodel;
+
+// call the submit form controller
 use App\Http\Controllers\UsersWithModel;
+// call the form validation
+use App\Http\Controllers\CreateController;
+use App\Http\Controllers\DeleteController;
+// call the controller UsersController
+use App\Http\Controllers\SubmitController;
+//call the controller userwithmodel;
+use App\Http\Controllers\UpdateController;
 // call the usesrHttpController
-use App\Http\Controllers\usesrHttpController;
+use App\Http\Controllers\Gc7TestController;
 // call HttpRequestController
-use App\Http\Controllers\HttpRequestController;
+use App\Http\Controllers\Gc7UsersController;
 // call the SessionWithLoginController
-use App\Http\Controllers\SessionWithLoginController;
+use App\Http\Controllers\PaginateController;
 // call the showlistcontroller
 use App\Http\Controllers\ShowListController;
 //call the paginatecontroller
-use App\Http\Controllers\PaginateController;
+use App\Http\Controllers\usesrHttpController;
 // call the SaveDataInDBController
-use App\Http\Controllers\SaveDataInDBController;
+use App\Http\Controllers\SubmitFormController;
 // call the deleController
-use App\Http\Controllers\DeleteController;
+use App\Http\Controllers\HttpRequestController;
 // call the UpdateController
-use App\Http\Controllers\UpdateController;
+use App\Http\Controllers\SaveDataInDBController;
+use App\Http\Controllers\FormValidationController;
+use App\Http\Controllers\SessionWithLoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,7 +46,6 @@ Route::view('/', 'welcome');
 Route::view('about', 'pages.about');
 Route::view('contact', 'pages.contact');
 
-Route::get('test', [TestController::class, 'test']);
 
 Route::get('createcontroller/{user}', [CreateController::class, 'index']);
 
@@ -80,8 +79,6 @@ Route::group(['middleware' => ['protectedPage']], function(){
     Route::view('login', 'login');
 });
 
-// Database configuration and Fetch
-Route::get('users', [UsersController::class, 'index']);
 
 // Database with model
 Route::get('userswithmodel', [UsersWithModel::class, 'getData']);
@@ -100,7 +97,7 @@ Route::view('profilesession', 'pages.profileSession');
 
 
 // logout
-Route::get('/logout', function () 
+Route::get('/logout', function ()
 {
     if(session()->has('first_name'))
     {
@@ -128,3 +125,9 @@ Route::get('editer', [UpdateController::class, 'editerData']);
 Route::get('delete/{id}', [UpdateController::class, 'deleteForUpdate']);
 Route::get('editpage/{id}', [UpdateController::class, 'editforDB']);
 Route::post('editpage', [UpdateController::class, 'showMeData']);
+
+
+/////////////////////////////////////////// GC7 ////////////////////////////////////////////
+
+Route::get('gc7users', [Gc7UsersController::class, 'index']);
+Route::get('gc7test', [Gc7TestController::class, 'test']);
