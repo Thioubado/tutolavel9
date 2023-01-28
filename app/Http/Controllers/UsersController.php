@@ -1,20 +1,14 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use App\Models\User;
 
-//call database
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
+// call database
 
-class UsersController extends Controller
+class UsersController extends Controller {
+	public function index() {
+		$users = (new User())->getRandom();
 
-{
-    //
-    public function index()
-    {
-        $users = User::all();
-        return view('pages.user', compact('users'));
-    }
+		return view('pages.user', compact('users'));
+	}
 }
