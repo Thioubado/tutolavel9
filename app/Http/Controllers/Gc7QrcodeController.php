@@ -9,6 +9,10 @@ namespace App\Http\Controllers;
  *
  * Script pour generer QR Code
  * https://codepen.io/davidshimjs/pen/NdBYrg
+ *
+ * IMG:
+ * http://127.0.0.1:8000/storage/img/Andrew2022.png
+ * http://127.0.0.1:8000/storage/img/Lionel2022.png
  */
 class Gc7QrcodeController extends Controller {
 	public function index() {
