@@ -9,7 +9,11 @@ namespace App\Http\Controllers;
  *
  * Generate QRCode : https://www.qrcode-monkey.com/fr.
  *
+ *
  * Script pour generer QR Code
+ *
+ * https://davidshimjs.github.io/qrcodejs
+ *
  * https://codepen.io/davidshimjs/pen/NdBYrg
  *
  * IMG:

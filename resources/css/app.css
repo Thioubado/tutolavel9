@@ -1,5 +1,14 @@
+@font-face {
+    font-family: 'Comic Sans MS GC7';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Comic Sans MS'), local('ComicSansMS-Regular'),
+        url(resources/fonts/comic-sans-ms_53a8778a817839ef2dbc5dc94ce14334.woff) format('woff'),
+        url(resources/fonts/comic-sans-ms_53a8778a817839ef2dbc5dc94ce14334.ttf) format('truetype');
+}
+
 body {
-    font-family: 'Comic Sans MS', sans-serif;
+    font-family: 'Comic Sans MS GC7', sans-serif;
 }
 
 nav {
