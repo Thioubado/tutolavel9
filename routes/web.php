@@ -31,6 +31,7 @@ use App\Http\Controllers\DeleteController;
 // call the UpdateController
 use App\Http\Controllers\UpdateController;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
