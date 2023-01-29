@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
  * IMPORTANT:.QR Code Reader:
  * https://github.com/mebjas/html5-qrcode.
  *
+ * Capturing image: https://web.dev/media-capturing-images
+ *
  * Generate QRCode : https://www.qrcode-monkey.com/fr.
  *
  * Script pour generer QR Code
