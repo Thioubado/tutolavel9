@@ -3,6 +3,7 @@
         <a href="/">Home</a>
         <hr>GC7
         <a href="gc7users">Users</a> |
+        <a href="gc7friends">Friends</a> |
         <a href="gc7qrcode">QrCode</a> |
         <a href="gc7test">Test</a>
         <hr>Momo
@@ -14,7 +15,7 @@
         <a href="sessionlogin">Session Login</a> |
         <a href="showlist">Show list</a> |
         <a href="pagination">Pagination with DB</a> |
-        <a href="save">Save data in DB</a> |
+        <a href="save">Save data in DB</a>
     </nav>
 </main>
 <hr>

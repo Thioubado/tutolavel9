@@ -1,0 +1,82 @@
+@font-face {
+    font-family: 'Comic Sans MS GC7';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Comic Sans MS'), local('ComicSansMS-Regular'),
+        url(/public/assets/css/themes/default/assets/fonts/comic-sans-ms_53a8778a817839ef2dbc5dc94ce14334.woff) format('woff'),
+        url(/public/assets/css/themes/default/assets/fonts/comic-sans-ms_53a8778a817839ef2dbc5dc94ce14334.ttf) format('truetype');
+}
+
+body {
+    background-color: beige;
+}
+
+body, h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comic Sans MS GC7', sans-serif;
+}
+
+hr {
+    margin: 5px 0;
+    padding: 0;
+}
+
+main {
+    /* border: 1px solid red; */
+    margin: 0 auto;
+    width: 97%;
+}
+
+#footer {
+    color: maroon;
+}
+
+nav {
+    flex: content;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+    color: maroon;
+}
+
+table {
+    /* border: 1px solid red; */
+    /* width: 80%; */
+    /* margin: 0 auto; */
+    /* background-color: #f00; */
+}
+
+@media only screen and (max-width: 700px) {
+
+    table {
+        border: 2px solid rgb(255, 206, 206) !important;
+        width: 90% !important;
+        margin: 0 auto !important;
+        border-radius: 7px;
+    }
+
+    tr {
+        width: 100% !important;
+        /* display: flex; */
+        /* justify-content: space-around; */
+        align-items: center;
+
+        /* background-color: red; */
+        /* margin: 20px; */
+        /* display: block; */
+        border-bottom: 2px solid black !important;
+        border: 3px solid blue !important;
+    }
+}
+
+.userBlock {
+    display: flex;
+}
+
+.userBlock img {
+    margin: 5px;
+    margin-right: 10px;
+}

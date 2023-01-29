@@ -21,7 +21,7 @@
     <p>Data: {{ $data }}</p>
     Result
     <div id="qr-data" style="width: 600px"></div>
-    <script src="./resources/js/html5-qrcode.min.v2.3.4.js"></script>
+    <script src="./../assets/js/html5-qrcode.min.v2.3.4.js"></script>
     <script>
         const html5QrCode = new Html5Qrcode( /* element id */ "reader");
         // File based scanning

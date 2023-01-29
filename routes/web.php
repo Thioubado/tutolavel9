@@ -5,10 +5,12 @@ use App\Http\Controllers\DeleteController;
 // call the submit form controller
 use App\Http\Controllers\FormValidationController;
 // call the form validation
+
+use App\Http\Controllers\Gc7UsersController;
+use App\Http\Controllers\Gc7FriendsController;
 use App\Http\Controllers\Gc7QrcodeController;
 use App\Http\Controllers\Gc7TestController;
-// call the controller UsersController
-use App\Http\Controllers\Gc7UsersController;
+
 // call the controller userwithmodel;
 use App\Http\Controllers\HttpRequestController;
 // call the usesrHttpController
@@ -125,5 +127,6 @@ Route::post('editpage', [UpdateController::class, 'showMeData']);
 // ///////////////////////////////////////// GC7 ////////////////////////////////////////////
 
 Route::get('gc7users', [Gc7UsersController::class, 'index']);
+Route::get('gc7friends', [Gc7FriendsController::class, 'list']);
 Route::get('gc7qrcode', [Gc7QrcodeController::class, 'index']);
 Route::get('gc7test', [Gc7TestController::class, 'test']);

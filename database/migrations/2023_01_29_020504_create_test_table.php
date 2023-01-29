@@ -17,6 +17,7 @@ return new class() extends Migration {
 			$table->string('prenom');
 			$table->string('adresse');
 			$table->string('email');
+			$table->string('photo');
 			$table->timestamps();
 		});
 	}
