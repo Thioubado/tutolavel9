@@ -1,35 +1,35 @@
 <?php
 
-use App\Http\Controllers\view;
-use Illuminate\Support\Facades\Route;
-
-// call the submit form controller
-use App\Http\Controllers\UsersWithModel;
-// call the form validation
 use App\Http\Controllers\CreateController;
 use App\Http\Controllers\DeleteController;
-// call the controller UsersController
-use App\Http\Controllers\SubmitController;
-//call the controller userwithmodel;
-use App\Http\Controllers\UpdateController;
-// call the usesrHttpController
+// call the submit form controller
+use App\Http\Controllers\FormValidationController;
+// call the form validation
+use App\Http\Controllers\Gc7QrcodeController;
 use App\Http\Controllers\Gc7TestController;
-// call HttpRequestController
+// call the controller UsersController
 use App\Http\Controllers\Gc7UsersController;
-// call the SessionWithLoginController
+// call the controller userwithmodel;
+use App\Http\Controllers\HttpRequestController;
+// call the usesrHttpController
 use App\Http\Controllers\PaginateController;
+// call HttpRequestController
+use App\Http\Controllers\SaveDataInDBController;
+// call the SessionWithLoginController
+use App\Http\Controllers\SessionWithLoginController;
 // call the showlistcontroller
 use App\Http\Controllers\ShowListController;
-//call the paginatecontroller
-use App\Http\Controllers\usesrHttpController;
+// call the paginatecontroller
+use App\Http\Controllers\SubmitController;
 // call the SaveDataInDBController
 use App\Http\Controllers\SubmitFormController;
 // call the deleController
-use App\Http\Controllers\HttpRequestController;
+use App\Http\Controllers\UpdateController;
 // call the UpdateController
-use App\Http\Controllers\SaveDataInDBController;
-use App\Http\Controllers\FormValidationController;
-use App\Http\Controllers\SessionWithLoginController;
+use App\Http\Controllers\UsersWithModel;
+use App\Http\Controllers\usesrHttpController;
+use App\Http\Controllers\view;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,7 +46,6 @@ Route::view('/', 'welcome');
 Route::view('about', 'pages.about');
 Route::view('contact', 'pages.contact');
 
-
 Route::get('createcontroller/{user}', [CreateController::class, 'index']);
 
 // view lesson
@@ -59,7 +58,7 @@ Route::get('createcontroller/{user}', [CreateController::class, 'index']);
 Route::get('view/{name}', [view::class, 'loadView']);
 
 // Laravel 9 tutorial: Submit form
-//Route::view('login', 'login');
+// Route::view('login', 'login');
 Route::post('submit', [SubmitFormController::class, 'index']);
 
 // exercice du submit
@@ -75,16 +74,15 @@ Route::view('groupemiddleware', 'pages.groupemiddleware');
 Route::view('noaccess', 'noaccess');
 
 // group middleware
-Route::group(['middleware' => ['protectedPage']], function(){
-    Route::view('login', 'login');
+Route::group(['middleware' => ['protectedPage']], function () {
+	Route::view('login', 'login');
 });
-
 
 // Database with model
 Route::get('userswithmodel', [UsersWithModel::class, 'getData']);
 
 // http method
-Route::get('usershttp',[UsesrHttpController::class, 'index']);
+Route::get('usershttp', [UsesrHttpController::class, 'index']);
 
 // http request
 Route::view('httprequest', 'pages.httprequest');
@@ -95,15 +93,13 @@ Route::post('sessionwithlogin', [SessionWithLoginController::class, 'userLoginSe
 Route::view('profilesession', 'pages.profileSession');
 // Login
 
-
 // logout
-Route::get('/logout', function ()
-{
-    if(session()->has('first_name'))
-    {
-        session() -> pull('first_name');
-    }
-    return redirect('sessionlogin');
+Route::get('/logout', function () {
+	if (session()->has('first_name')) {
+		session()->pull('first_name');
+	}
+
+	return redirect('sessionlogin');
 });
 
 // showlist from db
@@ -120,14 +116,14 @@ Route::post('save', [SaveDataInDBController::class, 'getData']);
 Route::get('montrer', [DeleteController::class, 'montrerData']);
 Route::get('delete/{id}', [DeleteController::class, 'supprimerData']);
 
-//route for update
+// route for update
 Route::get('editer', [UpdateController::class, 'editerData']);
 Route::get('delete/{id}', [UpdateController::class, 'deleteForUpdate']);
 Route::get('editpage/{id}', [UpdateController::class, 'editforDB']);
 Route::post('editpage', [UpdateController::class, 'showMeData']);
 
-
-/////////////////////////////////////////// GC7 ////////////////////////////////////////////
+// ///////////////////////////////////////// GC7 ////////////////////////////////////////////
 
 Route::get('gc7users', [Gc7UsersController::class, 'index']);
+Route::get('gc7qrcode', [Gc7QrcodeController::class, 'index']);
 Route::get('gc7test', [Gc7TestController::class, 'test']);

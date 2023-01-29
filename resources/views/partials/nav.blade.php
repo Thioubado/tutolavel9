@@ -3,6 +3,7 @@
         <a href="/">Home</a>
         <hr>GC7
         <a href="gc7users">Users</a> |
+        <a href="gc7qrcode">QrCode</a> |
         <a href="gc7test">Test</a>
         <hr>Momo
         <a href="about">About</a> |
