@@ -26,12 +26,12 @@ class DatabaseSeeder extends Seeder {
 		]);
 
 		$friends = [
-			['GrCOTE7', 'Lionel', 'CÔTE', 'GrCOTE7@cote7.fr', 'grcote7.png', 'SSeB'],
-			['JPB11', 'JP', 'B', 'JPB11@cote7.fr', 'jpb11.jpg', 'Castel'],
-			['Thr59', 'Thierry', 'ElRitalo', 'ThR59@cote7.fr', 'thr59.jpg', 'Maubeuge'],
-			['Momo', 'Mohamed', 'Th', 'Momo@cote7.fr', 'momo.png', 'Marocco'],
-			['Andy', 'Andrew', 'Hson', 'Andrew@cote7.fr', 'andy.png', 'Vers Dijon'],
-			['Gugu', 'Augustin', 'E.', 'Augustin@cote7.fr', 'gugu_malin.jpg', 'À la ferme'],
+			['GrCOTE7', 'Lionel', 'CÔTE', 'GrCOTE7@cote7.fr', 'grcote7.png','fr', 'SSeB'],
+			['JPB11', 'JP', 'B', 'JPB11@cote7.fr', 'jpb11.jpg', 'fr', 'Castel'],
+			['Thr59', 'Thierry', 'ElRitalo', 'ThR59@cote7.fr', 'thr59.jpg', 'fr', 'Maubeuge'],
+			['Momo', 'Mohamed', 'Th', 'Momo@cote7.fr', 'momo.png', 'ma', 'Marocco'],
+			['Andy', 'Andrew', 'Hson', 'Andrew@cote7.fr', 'andy.png', 'fr', 'Vers Dijon'],
+			['Gugu', 'Augustin', 'E.', 'Augustin@cote7.fr', 'gugu_malin.jpg', 'fr', 'À la ferme'],
 		];
 
 		foreach ($friends as $friend) {
@@ -41,6 +41,8 @@ class DatabaseSeeder extends Seeder {
 				'lastname' => $friend[2],
 				'email'    => $friend[3],
 				'picture'  => $friend[4],
+				'country'  => $friend[5],
+                'location'=>$friend[6]
 			]);
 		}
 	}
