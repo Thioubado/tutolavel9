@@ -1,4 +1,4 @@
-@extends ('layouts.main')
+@extends ('gc7layouts.main')
 
 @section('title')
     Show list
@@ -6,13 +6,13 @@
 
 @section('main')
     <h1>Show list Page</h1>
-    
+
     <style>
         table {
             margin-top: 20px!important;
             border-collapse: collapse;
         }
-        
+
         th,
         td {
             border: 2px solid rgb(179, 179, 179);
@@ -22,7 +22,7 @@
             text-align: center;
         }
     </style>
-    
+
     <table>
         <tr>
             <td>Id</td>

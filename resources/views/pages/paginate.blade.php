@@ -1,4 +1,4 @@
-@extends ('layouts.main')
+@extends ('gc7layouts.main')
 
 @section('title')
     Paginate
@@ -11,7 +11,7 @@
             margin-top: 20px!important;
             border-collapse: collapse;
         }
-        
+
         th,
         td {
             border: 2px solid grey;
@@ -21,7 +21,7 @@
             text-align: center;
         }
     </style>
-    
+
     <table>
         <tr>
             <td>Id</td>

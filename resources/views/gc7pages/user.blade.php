@@ -1,4 +1,4 @@
-@extends ('gc7layouts.prod')
+@extends ('gc7layouts.main')
 
 @section('title')
     Users
