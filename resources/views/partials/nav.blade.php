@@ -1,22 +1,25 @@
+<?php
+define ('ROOT', './../../');
+?>
 <main>
     <nav>
         <a href="/">Home</a>
         <hr>GC7
-        <a href="gc7users">Users</a> |
-        <a href="gc7friends">Friends</a> |
-        <a href="gc7qrcode">QrCode</a> |
-        <a href="api/friends/grcote7">GrCOTE7</a> |
-        <a href="gc7test">Test</a>
+        <a href="<?= ROOT ?>gc7users">Users</a> |
+        <a href="<?= ROOT ?>gc7friends">Friends</a> |
+        <a href="<?= ROOT ?>gc7qrcode">QrCode</a> |
+        <a href="<?= ROOT ?>api/friend/grcote7">GrCOTE7</a> |
+        <a href="<?= ROOT ?>gc7test">Test</a>
         <hr>Momo
-        <a href="about">About</a> |
-        <a href="contact">Contact</a> |
-        <a href="groupemiddleware">Goupe Middleware</a> |
-        <a href="userswithmodel">Users with model</a> |
-        <a href="httprequest">Http request Method</a> |
-        <a href="sessionlogin">Session Login</a> |
-        <a href="showlist">Show list</a> |
-        <a href="pagination">Pagination with DB</a> |
-        <a href="save">Save data in DB</a>
+        <a href="<?= ROOT ?>about">About</a> |
+        <a href="<?= ROOT ?>contact">Contact</a> |
+        <a href="<?= ROOT ?>groupemiddleware">Goupe Middleware</a> |
+        <a href="<?= ROOT ?>userswithmodel">Users with model</a> |
+        <a href="<?= ROOT ?>httprequest">Http request Method</a> |
+        <a href="<?= ROOT ?>sessionlogin">Session Login</a> |
+        <a href="<?= ROOT ?>showlist">Show list</a> |
+        <a href="<?= ROOT ?>pagination">Pagination with DB</a> |
+        <a href="<?= ROOT ?>save">Save data in DB</a>
     </nav>
 </main>
 <hr>

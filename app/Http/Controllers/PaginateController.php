@@ -2,17 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\member;
 
 // call the model
-use App\Models\member;
+use App\Models\Membre;
+use Illuminate\Http\Request;
 
 class PaginateController extends Controller
 {
     //
     public function pages()
     {
-        $data = member::paginate(3);
+        $data = Membre::paginate(3);
         return view('pages.paginate', ['members' => $data]);
     }
 }

@@ -2,17 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 // call the model
-use App\Models\member;
+use App\Models\Membre;
+use Illuminate\Http\Request;
 
 class ShowListController extends Controller
 {
     //
     public function getdata()
     {
-        $data = member::all();
-        return view('pages.show', ['members' => $data]);
+        $data = Membre::orderBy('pseudo')->get();
+        return view('pages.show', ['membres' => $data]);
     }
 }

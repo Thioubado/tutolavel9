@@ -3,6 +3,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Models\Gc7Friend;
+use App\Models\Membre;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
@@ -26,7 +27,7 @@ class DatabaseSeeder extends Seeder {
 		]);
 
 		$friends = [
-			['GrCOTE7', 'Lionel', 'CÔTE', 'GrCOTE7@cote7.fr', 'grcote7.png','fr', 'SSeB'],
+			['GrCOTE7', 'Lionel', 'CÔTE', 'GrCOTE7@cote7.fr', 'grcote7.png', 'fr', 'SSeB'],
 			['JPB11', 'JP', 'B', 'JPB11@cote7.fr', 'jpb11.jpg', 'fr', 'Castel'],
 			['Thr59', 'Thierry', 'ElRitalo', 'ThR59@cote7.fr', 'thr59.jpg', 'fr', 'Maubeuge'],
 			['Momo', 'Mohamed', 'Th', 'Momo@cote7.fr', 'momo.png', 'ma', 'Marocco'],
@@ -42,7 +43,18 @@ class DatabaseSeeder extends Seeder {
 				'email'    => $friend[3],
 				'picture'  => $friend[4],
 				'country'  => $friend[5],
-                'location'=>$friend[6]
+				'location' => $friend[6],
+			]);
+		}
+		foreach ($friends as $membre) {
+			Membre::create([
+				'pseudo'  => $membre[0],
+				'prenom'  => $membre[1],
+				'nom'     => $membre[2],
+				'email'   => $membre[3],
+				'photo'   => $membre[4],
+				'pays'    => $membre[5],
+				'adresse' => $membre[6],
 			]);
 		}
 	}

@@ -129,5 +129,5 @@ Route::post('editpage', [UpdateController::class, 'showMeData']);
 Route::get('gc7users', [Gc7UsersController::class, 'index']);
 Route::get('gc7friends', [Gc7FriendsController::class, 'list']);
 Route::get('gc7qrcode', [Gc7QrcodeController::class, 'index']);
-Route::get('api/friends/{username}', [Gc7ApiFriendController::class, 'friend']);
+Route::get('api/friend/{username}', [Gc7ApiFriendController::class, 'friend']);
 Route::get('gc7test', [Gc7TestController::class, 'test']);

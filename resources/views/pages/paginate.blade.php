@@ -6,31 +6,46 @@
 
 @section('main')
     <h1>Paginate Page</h1>
-
-    <table border='1'>
+    <style>
+        table {
+            margin-top: 20px!important;
+            border-collapse: collapse;
+        }
+        
+        th,
+        td {
+            border: 2px solid grey;
+            padding: 5px 10px;
+        }
+        span {
+            text-align: center;
+        }
+    </style>
+    
+    <table>
         <tr>
-            <td>id</td>
-            <td>nom</td>
-            <td>prenom</td>
-            <td>adresse</td>
+            <td>Id</td>
+            <td>Nom</td>
+            <td>Prénom</td>
+            <td>Adresse</td>
         </tr>
 
-        @foreach($members as $member)
-        <tr>
-            <td>{{$member['id']}}</td>
-            <td>{{$member['name']}}</td>
-            <td>{{$member['prenom']}}</td>
-            <td>{{$member['adresse']}}</td>
-        </tr>
+        @foreach ($members as $member)
+            <tr>
+                <td style="text-align:right">{{ $member['id'] }}</td>
+                <td>{{ $member['nom'] }}</td>
+                <td>{{ $member['prenom'] }}</td>
+                <td>{{ $member['adresse'] }}</td>
+            </tr>
         @endforeach
     </table>
 
     <span>
-        {{$members->Links()}}
+        {{ $members->Links() }}
     </span>
     <style>
-        .w-5{
-            display : none
+        .w-5 {
+            display: none
         }
     </style>
 @endsection
