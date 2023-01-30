@@ -5,6 +5,7 @@
         <a href="gc7users">Users</a> |
         <a href="gc7friends">Friends</a> |
         <a href="gc7qrcode">QrCode</a> |
+        <a href="api/friends/grcote7">GrCOTE7</a> |
         <a href="gc7test">Test</a>
         <hr>Momo
         <a href="about">About</a> |

@@ -15,6 +15,7 @@ body, h1, h2, h3 {
     margin: 0;
     padding: 0;
     font-family: 'Comic Sans MS GC7', sans-serif;
+    font-size: 1.4rem;
 }
 
 hr {
@@ -22,14 +23,16 @@ hr {
     padding: 0;
 }
 
-main {
+main, #footer {
     /* border: 1px solid red; */
-    margin: 0 auto;
-    width: 97%;
+    margin: 10px auto;
+    width: 98%;
 }
 
 #footer {
     color: maroon;
+    margin: 0;
+    margin: 0 2%;
 }
 
 nav {
@@ -53,22 +56,22 @@ table {
 
     table {
         border: 2px solid rgb(255, 206, 206) !important;
-        width: 90% !important;
+        width: 95% !important;
         margin: 0 auto !important;
         border-radius: 7px;
     }
 
     tr {
-        width: 100% !important;
+        /* width: 100% !important; */
         /* display: flex; */
         /* justify-content: space-around; */
-        align-items: center;
+        /* align-items: center; */
 
         /* background-color: red; */
         /* margin: 20px; */
         /* display: block; */
-        border-bottom: 2px solid black !important;
-        border: 3px solid blue !important;
+        /* border-bottom: 2px solid black !important; */
+        /* border: 3px solid blue !important; */
     }
 }
 
@@ -79,4 +82,39 @@ table {
 .userBlock img {
     margin: 5px;
     margin-right: 10px;
+}
+
+.gc7spaced td {
+    /* border: 3px solid blue !important; */
+    /* margin: 200px !important; */
+    padding: 20px 0;
+    padding: 20px 5px;
+    /* color:red !important; */
+}
+
+.qrbtn {
+    color: maroon;
+    padding: 3px 7px;
+    box-shadow: -5px 5px 10px grey;
+    cursor: pointer;
+}
+
+.gc7friendimg {
+    border: 2px solid black !important;
+    box-shadow: -5px 5px 10px grey;
+    width: 100%;
+    height: 100%
+}
+
+.modal .header{
+    color: red!important;
+}
+
+.ui.dimmer{
+    width: 90%;
+    margin: 0 auto;
+}
+.ui.modal>.content
+{
+    width: 90%;
 }

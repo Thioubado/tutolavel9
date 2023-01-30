@@ -25,23 +25,23 @@ class DatabaseSeeder extends Seeder {
 			'email' => 'Grcote7@gmail.com',
 		]);
 
-        $friends = [
-			['GrCOTE7', 'Lionel', 'CÔTE', 'GrCOTE7@cote7.fr', 'grcote7.png'],
-			['JPB11', 'JP', 'B', 'JPB11@cote7.fr', 'jpb11.jpg'],
-			['Thr59', 'Thierry', 'ElRitalo', 'ThR59@cote7.fr', 'thr59.jpg'],
-			['Momo', 'Mohamed', 'Th', 'Momo@cote7.fr', 'momo.png'],
-			['Andy', 'Andrew', 'Hson', 'Andrew@cote7.fr', 'andy.png'],
-			['Gugu', 'Augustin', 'E.', 'Augustin@cote7.fr', 'gugu_malin.jpg'],
+		$friends = [
+			['GrCOTE7', 'Lionel', 'CÔTE', 'GrCOTE7@cote7.fr', 'grcote7.png', 'SSeB'],
+			['JPB11', 'JP', 'B', 'JPB11@cote7.fr', 'jpb11.jpg', 'Castel'],
+			['Thr59', 'Thierry', 'ElRitalo', 'ThR59@cote7.fr', 'thr59.jpg', 'Maubeuge'],
+			['Momo', 'Mohamed', 'Th', 'Momo@cote7.fr', 'momo.png', 'Marocco'],
+			['Andy', 'Andrew', 'Hson', 'Andrew@cote7.fr', 'andy.png', 'Vers Dijon'],
+			['Gugu', 'Augustin', 'E.', 'Augustin@cote7.fr', 'gugu_malin.jpg', 'À la ferme'],
 		];
 
 		foreach ($friends as $friend) {
-            Gc7Friend::create([
-                'username' => $friend[0],
-                'name'     => $friend[1],
-                'lastname' => $friend[2],
-                'email'    => $friend[3],
-                'picture'  => $friend[4]
-            ]);
+			Gc7Friend::create([
+				'username' => $friend[0],
+				'name'     => $friend[1],
+				'lastname' => $friend[2],
+				'email'    => $friend[3],
+				'picture'  => $friend[4],
+			]);
 		}
 	}
 }
