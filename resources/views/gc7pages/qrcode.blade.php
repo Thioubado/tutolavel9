@@ -11,7 +11,7 @@
 
         <input type="file" id="qr-input-file" accept="image/*" capture="environment">
         <br>
-        Resultaa
+        Result
         <div id="qr-data" style="width: 600px"></div>
 
         <div id="reader"></div>

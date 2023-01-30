@@ -39,7 +39,10 @@
                 <div class="ui modal" id="modal{{ $k }}">
                     <i class="close icon"></i>
                     <div class="header">
-                        QrCode of {{ $friend->name }} ({{ $friend->username }})
+                        <h1>QrCode of {{ $friend->name }} ({{ $friend->username }})</h1>
+                        <p style="color: blue; font-size:16px;">Take your phone and your QrCode 's application<br>
+                        Or use this link <a href="./../../gc7qrcode">QrCode Page</a><br>
+                        ( If you have a webcam on your PC and can 'see' the QrCode on an other device <i class="smile outline icon"></i> ) </p>
                     </div>
                     <div class="image content modalimg">
                         <div class="ui medium image">
