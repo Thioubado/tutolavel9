@@ -106,24 +106,31 @@ table {
     height: 100%
 }
 
-.modal .header{
-    color: red!important;
+.modal .header {
+    color: red !important;
 }
 
-.ui.dimmer{
+.ui.dimmer {
     width: 90%;
     margin: 0 auto;
 }
-.ui.modal>.content
-{
+
+.ui.modal>.content {
     width: 95%;
 }
+
 .withoutborder {
     text-align: center;
-    border:none!important;
+    border: none !important;
     box-shadow: none;
     margin: 0 auto;
 }
+
 .ui.cards>.card {
-    /* width: 95%; */
+    width: 95%;
+}
+
+.ui.cards {
+    display: block!important;
+    margin-top: 0;
 }
