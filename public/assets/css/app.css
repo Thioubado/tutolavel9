@@ -118,3 +118,12 @@ table {
 {
     width: 90%;
 }
+.withoutborder {
+    text-align: center;
+    border:none!important;
+    box-shadow: none;
+    margin: 0 auto;
+}
+.ui.cards>.card {
+    width: 90%;
+}

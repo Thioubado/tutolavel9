@@ -6,7 +6,7 @@ use App\Http\Controllers\DeleteController;
 use App\Http\Controllers\FormValidationController;
 // call the form validation
 
-use App\Http\Controllers\Gc7ApiFriendsController;
+use App\Http\Controllers\Gc7ApiFriendController;
 use App\Http\Controllers\Gc7FriendsController;
 use App\Http\Controllers\Gc7QrcodeController;
 use App\Http\Controllers\Gc7TestController;
@@ -129,5 +129,5 @@ Route::post('editpage', [UpdateController::class, 'showMeData']);
 Route::get('gc7users', [Gc7UsersController::class, 'index']);
 Route::get('gc7friends', [Gc7FriendsController::class, 'list']);
 Route::get('gc7qrcode', [Gc7QrcodeController::class, 'index']);
-Route::get('api/friends/{username}', [Gc7ApiFriendsController::class, 'friend']);
+Route::get('api/friends/{username}', [Gc7ApiFriendController::class, 'friend']);
 Route::get('gc7test', [Gc7TestController::class, 'test']);
