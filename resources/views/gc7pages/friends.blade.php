@@ -37,7 +37,7 @@
             <div class="ui modal" id="modal{{ $k }}">
                 <i class="close icon"></i>
                 <div class="header">
-                  QrCode of {{ $friend->username }}
+                  QrCode of {{ $friend->name }} ({{ $friend->username }})
                 </div>
                 <div class="image content modalimg">
                   <div class="ui medium image">
