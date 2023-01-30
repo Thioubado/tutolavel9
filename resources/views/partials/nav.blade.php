@@ -1,9 +1,11 @@
-<?php
-define ('ROOT', './../../');
-?>
 <main>
+    <?php
+    if (! defined ('ROOT'))
+    define ('ROOT', './../../');
+
+    ?>
     <nav>
-        <a href="/">Home</a>
+        <a href="/">Home</a> (@php echo ucfirst(env('APP_ENV', 'prod')); @endphp)
         <hr>GC7
         <a href="<?= ROOT ?>gc7users">Users</a> |
         <a href="<?= ROOT ?>gc7friends">Friends</a> |

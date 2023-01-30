@@ -6,7 +6,7 @@ import './bootstrap';
 window.addEventListener('DOMContentLoaded', (event) => {
 
     const btns = document.getElementsByClassName('qrbtn');
-    console.log('Ready 2023')
+    console.log('Ready 2023 app.js')
     console.log(btns);
 
     // btns.forEach(element => {
@@ -24,8 +24,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
         console.log(index + ' ' + item);
 
-        $('#modal0')
-        .modal('show')
+        // $('#modal0')
+        // .modal('show')
     });
 
 
@@ -34,4 +34,4 @@ window.addEventListener('DOMContentLoaded', (event) => {
     // });
 
 })
-console.log('Ready 2022.')
+console.log('Ready 2022 app.js resources.')

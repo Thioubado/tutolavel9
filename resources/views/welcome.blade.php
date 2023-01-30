@@ -1,4 +1,4 @@
-@extends ('layouts.main')
+@extends ('gc7layouts.main')
 
 @section('title')
     Welcome

@@ -21,12 +21,14 @@
             @foreach ($data as $k => $friend)
                 <tr class="gc7spaced">
                     <td class="userBlock" style="width: 150px;  margin-left:7%">
-                        <img src="assets/img/{{ $friend->picture }}" class="ui mini rounded image gc7friendimg" title="Picture of {{ $friend->name }}" alt="Picture of {{ $friend->name }}">
+                        <img src="assets/img/{{ $friend->picture }}" class="ui mini rounded image gc7friendimg"
+                            title="Picture of {{ $friend->name }}" alt="Picture of {{ $friend->name }}">
                         <div>{{ $friend->username }}<br>{{ $friend->name }} </div>
                         </div>
                     </td>
                     <td style="width: 60%; padding-left: 20px; font-weight: bold">
-                        <button class="qrbtn" title="Le QrCode de {{ $friend->username }}"> <i class="qrcode icon"></i> See his QrCode</button>
+                        <button class="qrbtn" title="The QrCode of {{ $friend->username }}"> <i class="qrcode icon"></i> See
+                            his QrCode</button>
                         {{-- @php
                            $qrcode = strtolower($friend->username);
                            echo "<img src='assets/img/qr_{$qrcode}.png' class='ui mini image' alt='Qrcode&nbsp;de&nbsp;{$friend->username}'>";
@@ -34,26 +36,28 @@
                     </td>
                 </tr>
 
-            <div class="ui modal" id="modal{{ $k }}">
-                <i class="close icon"></i>
-                <div class="header">
-                  QrCode of {{ $friend->name }} ({{ $friend->username }})
-                </div>
-                <div class="image content modalimg">
-                  <div class="ui medium image">
-                    <img src="assets/img/{{ $friend->picture }}">
-                  </div>
+                <div class="ui modal" id="modal{{ $k }}">
+                    <i class="close icon"></i>
+                    <div class="header">
+                        QrCode of {{ $friend->name }} ({{ $friend->username }})
+                    </div>
+                    <div class="image content modalimg">
+                        <div class="ui medium image">
+                            @php
+                                $qr = 'qr-' . strtolower($friend->username) . '.png';
+                            @endphp
+                            <img src="assets/img/{{ $qr }}" alt="QrCODE of {{ $friend->name }} alias {{ $friend->username }}">
+                        </div>
 
+                    </div>
+                    <div class="actions">
+                        <div class="ui positive right labeled icon button">
+                            Yep, that's good !
+                            <i class="checkmark icon"></i>
+                        </div>
+                    </div>
                 </div>
-                <div class="actions">
-                  <div class="ui positive right labeled icon button">
-                    Yep, that's good !
-                    <i class="checkmark icon"></i>
-                  </div>
-                </div>
-              </div>
-
-              @endforeach
+            @endforeach
         </tbody>
     </table>
 @endsection

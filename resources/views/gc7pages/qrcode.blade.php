@@ -6,21 +6,24 @@
 
 @section('main')
     <h1>QrCode Page</h1>
-    Reader
+    <p>Reader</p>
     <div id="scanner">
 
         <input type="file" id="qr-input-file" accept="image/*" capture="environment">
+        <br>
+        Resultaa
+        <div id="qr-data" style="width: 600px"></div>
 
+        <div id="reader"></div>
+        <!--
         <div id="reader-top-container" style="position: relative;">
             <div id="reader-container">
-                <div id="reader"></div>
             </div>
         </div>
         <div class="empty"></div>
+        -->
     </div>
     <p>Data: {{ $data }}</p>
-    Result
-    <div id="qr-data" style="width: 600px"></div>
     <script src="./../assets/js/html5-qrcode.min.v2.3.4.js"></script>
     <script>
         const html5QrCode = new Html5Qrcode( /* element id */ "reader");
@@ -40,6 +43,9 @@
                     // success, use decodedText
                     qrdata.innerHTML = decodedText
                     console.log(decodedText);
+
+                    window.open(decodedText,"_self")
+
                 })
                 .catch(err => {
                     // failure, handle it.
