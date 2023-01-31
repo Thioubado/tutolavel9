@@ -5,5 +5,5 @@
 @endsection
 
 @section('main')
-    <h1>Welcome Page</h1>
+    <h1>Welcome at Homepage</h1>
 @endsection

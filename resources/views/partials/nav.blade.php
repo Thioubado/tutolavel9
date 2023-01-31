@@ -1,10 +1,10 @@
-<main>
+<nav>
     <?php
-    if (! defined ('ROOT'))
-    define ('ROOT', './../../');
-
+    if (!defined('ROOT')) {
+        define('ROOT', './../../');
+    }
     ?>
-    <nav>
+    <main>
         <a href="/">Home</a> (@php echo ucfirst(env('APP_ENV', 'prod')); @endphp)
         <hr>GC7
         <a href="<?= ROOT ?>gc7users">Users</a> |
@@ -22,6 +22,6 @@
         <a href="<?= ROOT ?>showlist">Show list</a> |
         <a href="<?= ROOT ?>pagination">Pagination with DB</a> |
         <a href="<?= ROOT ?>save">Save data in DB</a>
-    </nav>
-</main>
+    </main>
+</nav>
 <hr>
