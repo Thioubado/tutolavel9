@@ -1,5 +1,4 @@
 @extends ('gc7layouts.main')
-
 @section('title')
     Test
 @endsection

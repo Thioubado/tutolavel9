@@ -1,19 +1,13 @@
 <?php
-
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
+use App\Http\Tools\Gc7;
 // call the model
 
-use App\Models\user;
+use App\Models\User;
 
-class UsersWithModel extends Controller
-{
-    //
-
-   public function getData()
-   {
-        return User::all(); //user peut aussi etre en minuscule
-   }
+class UsersWithModel extends Controller {
+	public function getData() {
+		Gc7::aff(User::all());
+	}
 }
