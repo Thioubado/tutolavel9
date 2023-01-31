@@ -1,5 +1,7 @@
 # Local installation
 
+Modification du readMe
+
 1. Fork the projet and clone this fork on your local server
    
 2. in CLI, in your root folder
