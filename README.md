@@ -1,9 +1,29 @@
+# Local installation
 
-Migrations & seed:
+1. Fork the projet and clone this fork on your local server
+   
+2. in CLI, in your root folder
 
-```
-php .\artisan migrate:refresh --seed
-```
+
+    ```
+    composer update
+    ```
+
+3. And
+
+    ```
+    npm i
+    ```
+
+4. Copy and complete *.env* from .*env_example*
+
+
+5. Migrations & seed:
+
+    ```
+    php .\artisan migrate:refresh --seed
+    ```
+
 
 ----
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
