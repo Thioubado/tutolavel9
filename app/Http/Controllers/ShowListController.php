@@ -11,7 +11,7 @@ class ShowListController extends Controller
     //
     public function getdata()
     {
-        $data = Membre::orderBy('pseudo')->get();
+        $data = Membre::orderBy('pseudo' )->get();
         return view('pages.show', ['membres' => $data]);
     }
 }
