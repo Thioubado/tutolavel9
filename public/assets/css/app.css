@@ -32,34 +32,15 @@ main, #footer {
     margin: 0 auto;
 }
 
+.ui.menu {
+    border-radius: 0;
+}
+
 footer {
     color: maroon;
     margin: 0;
     margin: 0 1%;
 }
-
-nav {
-    flex: content;
-    justify-content: center;
-    background-color: #eee;
-}
-
-nav main a:not(:first-child) {
-    color: maroon;
-    /* padding-left: 2px;
-    padding-right: 2px; */
-    border-left: 2px solid red;
-    padding-left: 5px;
-    margin: 0 2px;
-}
-
-nav main a.active{
-    font-weight: bold;
-    background-color: yellow;
-    padding-right: 5px;
-    margin-left: 5px;
-    border-radius: 4px;
-    }
 
 table {
     /* border: 1px solid red; */

@@ -14,14 +14,15 @@
     .case {
         align-items: center;
         /* border: 1px solid blue; */
-        /* margin: 0 10px; */
     }
     </style>
 
 <h1>Test Page</h1>
+
+
 @php
     use App\Http\Tools\Gc7;
-    Gc7::aff($data, '$menus');
+    // Gc7::aff($data, '$data');
 @endphp
 
 @endsection
