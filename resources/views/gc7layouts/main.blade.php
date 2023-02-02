@@ -36,9 +36,9 @@
     </main>
 
     <hr>
-    <div id="footer">
+    <footer>
         Footer
-    </div>
+    </footer>
 </body>
 
 </html>

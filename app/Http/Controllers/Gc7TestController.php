@@ -1,66 +1,39 @@
 <?php
 namespace App\Http\Controllers;
 
-use App\Models\Membre;
-use App\Http\Tools\Gc7;
-
 class Gc7TestController extends Controller {
 	public function test() {
+		$menus = [
+			'GC7' => [
+				'owner' => 'GC7',
+				'color' => 'brown',
+				'pages' => [
+					'gc7users'           => 'Users',
+					'gc7friends'         => 'Friends',
+					'gc7qrcode'          => 'QrCode',
+					'api/friend/grcote7' => 'GrCOTE7',
+					'gc7test'            => 'Test',
+				],
+			],
+			'Momo' => [
+				'owner' => 'Momo',
+				'color' => 'yellow',
+				'pages' => [
+					'about'            => 'About',
+					'contact'          => 'Contact',
+					'groupemiddleware' => 'Goupe Middleware',
+					'userswithmodel'   => 'Users with model',
+					'httprequest'      => 'Http request Method',
+					'sessionlogin'     => 'Session Login',
+					'showlist'         => 'Show list',
+					'pagination'       => 'Pagination with DB',
+					'save'             => 'Save data in DB',
+				],
+			],
+		];
 
-        // 1 - Pour récupérer les id de tous les 'Membre'
+		$data = $menus;
 
-        $realArrToTest = [... Membre::pluck('id')];
-        // Gc7::aff(implode(', ', $realArrToTest));
-		//$me = Gc7::aff(implode(', ', $realArrToTest));
-		
-
-        // 2 - Pour sélectionner que les 'pairs'
-		// 1 2 3 4 5 6 7
-		foreach($realArrToTest as $n)
-		{
-			$phrase = 'Id ';
-			while($n % 2 == 0){
-				
-				Gc7::aff($n++, $phrase) ;
-			}
-			
-
-
-			// if($n  % 2 == 0){
-			// 	//return $nArr[] = $n;
-			// 	return 'ok';
-			// }else{
-			// 	return $n;
-			// }
-
-			//return $n;
-			// if (!($n & 1)) {
-			// 	$nArr[] = $n;
-			// }
-		}
-
-		//Gc7::aff('moi '.$moi);
-		$arr = range(1, 10);
-		// Façon 1
-		foreach ($arr as $n) {
-			if (!($n & 1)) {
-				$nArr[] = $n;
-			}
-		}
-		// Façon 2
-
-		$nArrKeys=array_map(fn ($v): int => ($v & 1 ? 0 : $v), $arr);
-        $nArrKeys = array_flip($nArrKeys);
-        unset($nArrKeys[0]);
-        $nArrKeys = array_flip($nArrKeys);
-
-		$data = [[$arr, $nArr],[$arr, $nArrKeys], implode(', ', $realArrToTest)];
-
-		// $data = $arr;
-		// Rien ne t'empêche de faire ce genre de tableau, pour ensuite test la valeur et n'afficher que les pairs ;-)...
-
-		// Ici ton code pour ne filter dans ce tableau que les pairs
-
-		return view('gc7pages.test', ['data' => $data ?? 'Néant']);
+		return view('gc7pages.test', ['data' => $data ?? []]);
 	}
 }
