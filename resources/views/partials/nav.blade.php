@@ -7,7 +7,7 @@
     // echo URI;
     function is_active($page)
     {
-        return $page == URI ? 'active' : '';
+        return $page == URI ? ' active' : '';
     }
 
     $menus = [

@@ -10,7 +10,7 @@
         </div>
         @foreach ($menu['pages'] as $uri => $page)
             {{-- {{$loop->iteration}} --}}
-            <a href="<?= ROOT . $uri ?>" class="item <?= is_active($uri) ?>"><?= $page ?></a>
+            <a href="<?= ROOT . $uri ?>" class="item<?= is_active($uri) ?>"><?= $page ?></a>
             @if ($loop->iteration % 7 > 5)
                 </div>
                 <div class="ui {{ $menu['color'] }} three inverted menu">
