@@ -22,7 +22,7 @@
 
 @php
     use App\Http\Tools\Gc7;
-    // Gc7::aff($data, '$data');
+    Gc7::aff($data, '$data');
 @endphp
 
 @endsection
