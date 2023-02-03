@@ -106,7 +106,7 @@ Route::get('/logout', function () {
 });
 
 // showlist from db
-Route::get('showlist', [ShowListController::class, 'getData']);
+Route::get('showlist', [ShowListController::class, 'pairs']);
 
 // paginate page
 Route::get('pagination', [PaginateController::class, 'pages']);
@@ -131,4 +131,4 @@ Route::get('gc7users', [Gc7UsersController::class, 'index']);
 Route::get('gc7friends', [Gc7FriendsController::class, 'list']);
 Route::get('gc7qrcode', [Gc7QrcodeController::class, 'index']);
 Route::get('api/friend/{username}', [Gc7ApiFriendController::class, 'friend']);
-Route::get('gc7test', [Gc7TestController::class, 'test']);
+Route::get('gc7test', [Gc7TestController::class, 'pairs']);
