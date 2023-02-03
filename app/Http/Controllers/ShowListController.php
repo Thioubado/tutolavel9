@@ -15,19 +15,27 @@ class ShowListController extends Controller {
 	}
 
 	public function pairs() {
-		$data = [...Membre::pluck('id')];
+		// $data = [...Membre::pluck('id')];
 		// $data = Membre::orderBy('id')->get('id');
+		 //$data = membre::where('id', '=', 4)->get();
+		 $data = membre::all();
 
-
-		foreach ($data as $n) {
-            while (0 == $n % 2) {
-                echo $n++ . '<br>';
-			}
+		if($data->id % 2 == 0)
+		{
+			$data = $membre;
 		}
-		++$n;
+		
+		//data=range(1,6);
 
-        Gc7::aff($data, '$data');
+		// foreach ($data->id as $n) {
+        //     while (0 == $n % 2) {
+        //         echo $n++ . '<br>';
+		// 	}
+		// }
+		// ++$n;
 
-		// return view('pages.show', ['membres' => $data]);
+    	//Gc7::aff($data, '$data');
+
+		return view('pages.show', ['membres' => $data]);
 	}
 }
