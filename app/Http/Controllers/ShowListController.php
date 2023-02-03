@@ -22,7 +22,7 @@ class ShowListController extends Controller
 
     public function pairs()
 	{
-		$data = [... Membre::pluck('id')];
+		$data = [... Membre::all()];
 		//$data = Membre::orderBy('id')->get('id');
 		foreach ($data as $n) {
 			while ($n % 2 == 0) {
