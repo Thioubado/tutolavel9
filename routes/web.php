@@ -1,37 +1,38 @@
 <?php
 
-use App\Http\Controllers\CreateController;
-use App\Http\Controllers\DeleteController;
-// call the submit form controller
-use App\Http\Controllers\FormValidationController;
-// call the form validation
-
-use App\Http\Controllers\Gc7ApiFriendController;
-use App\Http\Controllers\Gc7FriendsController;
-use App\Http\Controllers\Gc7QrcodeController;
-use App\Http\Controllers\Gc7TestController;
-// call the controller userwithmodel;
-use App\Http\Controllers\Gc7UsersController;
-// call the usesrHttpController
-use App\Http\Controllers\HttpRequestController;
-// call HttpRequestController
-use App\Http\Controllers\PaginateController;
-// call the SessionWithLoginController
-use App\Http\Controllers\SaveDataInDBController;
-// call the showlistcontroller
-use App\Http\Controllers\SessionWithLoginController;
-// call the paginatecontroller
-use App\Http\Controllers\ShowListController;
-// call the SaveDataInDBController
-use App\Http\Controllers\SubmitController;
-// call the deleController
-use App\Http\Controllers\SubmitFormController;
-// call the UpdateController
-use App\Http\Controllers\UpdateController;
-use App\Http\Controllers\UsersWithModel;
-use App\Http\Controllers\usesrHttpController;
 use App\Http\Controllers\view;
 use Illuminate\Support\Facades\Route;
+// call the submit form controller
+use App\Http\Controllers\UsersWithModel;
+// call the form validation
+
+use App\Http\Controllers\CreateController;
+use App\Http\Controllers\DeleteController;
+use App\Http\Controllers\Gc7Qr2Controller;
+use App\Http\Controllers\SubmitController;
+// call the controller userwithmodel;
+use App\Http\Controllers\UpdateController;
+// call the usesrHttpController
+use App\Http\Controllers\Gc7TestController;
+// call HttpRequestController
+use App\Http\Controllers\Gc7UsersController;
+// call the SessionWithLoginController
+use App\Http\Controllers\PaginateController;
+// call the showlistcontroller
+use App\Http\Controllers\ShowListController;
+// call the paginatecontroller
+use App\Http\Controllers\Gc7QrcodeController;
+// call the SaveDataInDBController
+use App\Http\Controllers\usesrHttpController;
+// call the deleController
+use App\Http\Controllers\Gc7FriendsController;
+// call the UpdateController
+use App\Http\Controllers\SubmitFormController;
+use App\Http\Controllers\HttpRequestController;
+use App\Http\Controllers\Gc7ApiFriendController;
+use App\Http\Controllers\SaveDataInDBController;
+use App\Http\Controllers\FormValidationController;
+use App\Http\Controllers\SessionWithLoginController;
 
 
 /*
@@ -130,5 +131,6 @@ Route::post('editpage', [UpdateController::class, 'showMeData']);
 Route::get('gc7users', [Gc7UsersController::class, 'index']);
 Route::get('gc7friends', [Gc7FriendsController::class, 'list']);
 Route::get('gc7qrcode', [Gc7QrcodeController::class, 'index']);
+Route::get('gc7qr2', [Gc7Qr2Controller::class, 'index']);
 Route::get('api/friend/{username}', [Gc7ApiFriendController::class, 'friend']);
 Route::get('gc7test', [Gc7TestController::class, 'pairs']);
