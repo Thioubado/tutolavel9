@@ -37,7 +37,7 @@
 
     <hr>
     <footer>
-        Footer
+        Footer Semantic
     </footer>
 </body>
 

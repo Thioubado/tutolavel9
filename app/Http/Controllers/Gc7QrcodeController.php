@@ -21,10 +21,32 @@ namespace App\Http\Controllers;
  * http://127.0.0.1:8000/storage/img/Lionel2022.png
  */
 class Gc7QrcodeController extends Controller {
-	public function index() {
+	public function index($id = null) {
 		// './../resources/img/qrcode_mplionel.png');
-		$data = 789;
+		$data = $id;
 
-		return view('gc7pages.qrcode', ['data' => $data]);
+		// return view('gc7pages.qrcode', ['data' => $data]);
+
+		if ($id) {
+			$function = 'qrcode' . $id;
+
+			return $this->{$function}();
+		}
+
+		return $this->default();
+	}
+
+	public function default() {
+		return view('gc7pages.qrcode', ['data' => $data ?? null]);
+	}
+
+	public function qrcode1() {
+		return view('gc7pages.qrcode1', ['data' => $data ?? null]);
+	}
+
+	public function qrcode2() {
+		$data = [1, 2, 3];
+
+		return view('gc7pages.qrcode2', ['data' => $data ?? null]);
 	}
 }

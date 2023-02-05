@@ -3,26 +3,23 @@ namespace App\Http\Controllers;
 
 use App\Models\Membre;
 
-class Gc7TestController extends Controller
-{
-    public function test()
-    {
-        $me = pairs();
-        $data = [1, 2, 3]-> pairs();
+class Gc7TestController extends Controller {
+	public function test() {
+		$data = [1, 2, 3];
 
-        return view('gc7pages.test', ['data' => $data ?? []]);
-    }
+		return view('gc7pages.test', ['data' => $data ?? []]);
+	}
 
-	public function pairs()
-	{
-		$data = [... Membre::pluck('id')];
-		//$data = Membre::orderBy('id')->get('id');
+	public function pairs() {
+		$data = [...Membre::pluck('id')];
+		// $data = Membre::orderBy('id')->get('id');
 		foreach ($data as $n) {
-			while ($n % 2 == 0) {
-				echo $n++.'<br>';
+			while (0 == $n % 2) {
+				echo $n++ . '<br>';
 			}
 		}
-		$n++;
+		++$n;
+
 		return view('gc7pages.test', ['data' => $data ?? []]);
 	}
 }
