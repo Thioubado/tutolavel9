@@ -43,24 +43,8 @@
 
 <script>
     window.addEventListener('DOMContentLoaded', (event) => {
-
         $('.ui.dropdown').mouseover (function(){
             $('.ui.dropdown').dropdown({on:'hover'});
         });
-
-        // $('.clearable.example .ui.selection.dropdown')
-        //     .dropdown({
-        //         clearable: true
-        //     });
-        // $('.clearable.example .ui.inline.dropdown')
-        //     .dropdown({
-        //         clearable: true,
-        //         placeholder: 'any'
-        //     });
-
-        // $('.upward.example .dropdown')
-        //     .dropdown({
-        //         direction: 'upward'
-        //     });
     });
 </script>

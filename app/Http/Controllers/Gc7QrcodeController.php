@@ -28,9 +28,10 @@ class Gc7QrcodeController extends Controller {
 		// return view('gc7pages.qrcode', ['data' => $data]);
 
 		if ($id) {
-			$function = 'qrcode' . $id;
+			$view = 'qrcode' . $id;
 
-			return $this->{$function}();
+			// return $this->{$function}();
+			return view('gc7pages.' . $view, ['data' => $data ?? null]);
 		}
 
 		return $this->default();
@@ -40,13 +41,13 @@ class Gc7QrcodeController extends Controller {
 		return view('gc7pages.qrcode', ['data' => $data ?? null]);
 	}
 
-	public function qrcode1() {
-		return view('gc7pages.qrcode1', ['data' => $data ?? null]);
-	}
+	// public function qrcode1() {
+	// 	return view('gc7pages.qrcode1', ['data' => $data ?? null]);
+	// }
 
-	public function qrcode2() {
-		$data = [1, 2, 3];
+	// public function qrcode2() {
+	// 	$data = [1, 2, 3];
 
-		return view('gc7pages.qrcode2', ['data' => $data ?? null]);
-	}
+	// 	return view('gc7pages.qrcode2', ['data' => $data ?? null]);
+	// }
 }

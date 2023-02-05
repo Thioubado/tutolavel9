@@ -28,12 +28,12 @@
             use App\Http\Tools\Gc7;
             Gc7::aff($data);
 
-            foreach ($data as $k => $v) {
-                echo $k . ' ' . $v . '<br>';
-            }
+            // foreach ($data as $k => $v) {
+            //     echo $k . ' ' . $v . '<br>';
+            // }
         @endphp
     </p>
-    
+
     <script>
         const html5QrCode = new Html5Qrcode( /* element id */ "reader");
         // File based scanning

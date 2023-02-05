@@ -5,7 +5,7 @@
 @endsection
 
 @section('main')
-    <h1>QrCode Page</h1>
+    <h1>QrCode Page 1</h1><br>
 
     <p>Reader based on a HTML 5 librairy (html5-qrcode.min.v2.3.4.js)</p>
     <p>→ Work slowly, and only on hight quality QrCodes - And only one by one</p>
