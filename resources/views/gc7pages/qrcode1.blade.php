@@ -6,7 +6,14 @@
 
 @section('main')
     <h1>QrCode Page</h1>
-    <p>Reader</p>
+
+    <p>Reader based on a HTML 5 librairy (html5-qrcode.min.v2.3.4.js)</p>
+    <p>→ Work slowly, and only on hight quality QrCodes - And only one by one</p>
+
+    <p>Example of a such result with </p>
+
+    <hr>
+<br>
     <div id="scanner">
 
         <input type="file" id="qr-input-file" accept="image/*" capture="environment">
@@ -15,13 +22,7 @@
         <div id="qr-data" style="width: 600px"></div>
 
         <div id="reader"></div>
-        <!--
-        <div id="reader-top-container" style="position: relative;">
-            <div id="reader-container">
-            </div>
-        </div>
-        <div class="empty"></div>
-        -->
+
     </div>
     <p>Data: {{ $data }}</p>
     <script src="./../assets/js/html5-qrcode.min.v2.3.4.js"></script>

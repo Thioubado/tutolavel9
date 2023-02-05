@@ -20,7 +20,8 @@
                     </span>
                     <div class="menu">
                         <div class="item" data-value="v1"><a href="./../../gc7qrcode" style="color:#333">Les QrCodes</a></div>
-                        <div class="item" data-value="v1"><a href="./../../gc7qrcode/1" style="color:#333">Version 1</a></div>
+                        <div class="item" data-value="v1"><a href="./../../gc7friends" style="color:#333">Friends</a></div>
+                        <div class="item" data-value="v1"><a href="./../../gc7qrcode/1" style="color:#333">1 - HTML JS Reader</a></div>
                         <div class="item" data-value="v2"><a href="./../../gc7qrcode/2" style="color:#333">Version 2</a></div>
                     </div>
                 </div>
@@ -43,23 +44,23 @@
 <script>
     window.addEventListener('DOMContentLoaded', (event) => {
 
-        $('.ui.dropdown')
-  .dropdown()
-;
+        $('.ui.dropdown').mouseover (function(){
+            $('.ui.dropdown').dropdown({on:'hover'});
+        });
 
-        $('.clearable.example .ui.selection.dropdown')
-            .dropdown({
-                clearable: true
-            });
-        $('.clearable.example .ui.inline.dropdown')
-            .dropdown({
-                clearable: true,
-                placeholder: 'any'
-            });
+        // $('.clearable.example .ui.selection.dropdown')
+        //     .dropdown({
+        //         clearable: true
+        //     });
+        // $('.clearable.example .ui.inline.dropdown')
+        //     .dropdown({
+        //         clearable: true,
+        //         placeholder: 'any'
+        //     });
 
-        $('.upward.example .dropdown')
-            .dropdown({
-                direction: 'upward'
-            });
+        // $('.upward.example .dropdown')
+        //     .dropdown({
+        //         direction: 'upward'
+        //     });
     });
 </script>
