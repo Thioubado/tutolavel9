@@ -76,13 +76,14 @@ class Gc7QrcodeController extends Controller {
 
 		// Gc7::aff($data, '$data');
 
+        // // Very bad decoder
 		// $qrc = new QRCode();
-		// $qrc->readFromFile('./public/assets/img/qr-andy.png');
+		// $qrc->readFromFile('./../public/assets/img/qr-andy.png');
 		// Gc7::aff($qrc);
 
         $qrcode = new QrReader('./../public/assets/img/qr-andy.png');
         $data = $qrcode->text(); //return decoded text from QR Code
 
-		return 'QR Code decoder<br>:'.$data;
+		return 'QR Code decoder:<br>'.$data;
 	}
 }
