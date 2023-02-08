@@ -1,5 +1,6 @@
 <?php
-define('URI', substr($_SERVER['PATH_INFO'] ?? '/', 1));
+// define('URI', substr($_SERVER['PATH_INFO'] ?? '/', 1));
+define('URI', substr($_SERVER['REQUEST_URI'] ?? '/', 1));
 use Barryvdh\Debugbar\Facades\Debugbar as DebugbarGc7;
 
 if (!defined('ROOT')) {
@@ -12,7 +13,7 @@ function isActive($page) {
     // DebugBarGc7::addMessage(substr($page, 0, 5), 'Page');
 	return $page == URI  ? ' active' : '';
 }
-// DebugBarGc7::addMessage(URI, 'URI');
+DebugBarGc7::addMessage(URI, 'URI');
 
 $menus = [
 	'GC7' => [

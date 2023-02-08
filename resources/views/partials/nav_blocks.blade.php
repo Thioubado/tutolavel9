@@ -18,9 +18,9 @@ use Barryvdh\Debugbar\Facades\Debugbar as DebugbarGc7;
             @php
             $mainLink='';
             if ($uri=='gc7qrcode') {
-                DebugBarGc7::addMessage($page);
-                DebugBarGc7::addMessage(URI, substr(URI, 0, 5));
-                DebugBarGc7::addMessage($uri, substr($uri, 0, 5));
+                // DebugBarGc7::addMessage($page);
+                // DebugBarGc7::addMessage(URI, substr(URI, 0, 5));
+                // DebugBarGc7::addMessage($uri, substr($uri, 0, 5));
                 // $mainLink = ' active';
                 ?>
                 <div class="ui dropdown" id="dropdownMenu">
