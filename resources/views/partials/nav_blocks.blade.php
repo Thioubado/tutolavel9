@@ -60,6 +60,6 @@ use App\Http\Tools\Gc7;
         $('.ui.dropdown').mouseover (function(){
             $('.ui.dropdown').dropdown({on:'hover'});
         });
-        $('.ui.dropdown').dropdown();
+        // $('.ui.dropdown').dropdown();
     });
 </script>
