@@ -10,9 +10,9 @@ if (!defined('ROOT')) {
 function isActive($page) {
 
     // DebugBarGc7::addMessage(substr($page, 0, 5), 'Page');
-	return (substr($page, 0, 5) == substr(URI, 0, 5) || substr($page, 0, 5)=='gc7qr') ? ' active' : '';
+	return $page == URI  ? ' active' : '';
 }
-DebugBarGc7::addMessage(URI, 'URI');
+// DebugBarGc7::addMessage(URI, 'URI');
 
 $menus = [
 	'GC7' => [

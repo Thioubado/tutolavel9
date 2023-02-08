@@ -22,6 +22,7 @@
 
 @php
     use App\Http\Tools\Gc7;
+    // $data=$menus;
     Gc7::aff($data, '$data');
 @endphp
 

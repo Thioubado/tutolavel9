@@ -102,7 +102,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     const dropdownMenu = document.getElementById('dropdownMenu')
     dropdownMenu.click();
-    console.log( dropdownMenu );
+    // console.log( dropdownMenu );
 
 })
 console.log('Ready 2022 app.js public.')
