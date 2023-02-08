@@ -15,7 +15,7 @@
                 ?>
                 <div class="ui dropdown">
                     <input type="hidden" name="QrCode">
-                    <span class="item">
+                    <span class="item active">
                         <i class="qrcode icon"></i>
                     </span>
                     <div class="menu">
