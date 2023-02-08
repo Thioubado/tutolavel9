@@ -8,9 +8,8 @@ if (!defined('ROOT')) {
 
 // echo URI;
 function isActive($page) {
-	// DebugBarGc7::addMessage(substr($page, 0, 5), 'URI: ' . substr(URI, 0, 5));
 
-    DebugBarGc7::addMessage(substr($page, 0, 5), 'Page');
+    // DebugBarGc7::addMessage(substr($page, 0, 5), 'Page');
 	return (substr($page, 0, 5) == substr(URI, 0, 5) || substr($page, 0, 5)=='gc7qr') ? ' active' : '';
 }
 DebugBarGc7::addMessage(URI, 'URI');
