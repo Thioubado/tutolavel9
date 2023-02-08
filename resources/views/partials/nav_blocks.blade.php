@@ -35,12 +35,7 @@ use App\Http\Tools\Gc7;
                                 echo '<div class="item" data-value="v1"><a href="'.$uri.'" style="color:#333">'.$item.'</a></div>';
                             }
                         }
-
                          ?>
-                        <!-- @foreach ($page as $submenu => $linkk)
-                        <?php if ($submenu??null) echo 'ok'; ?>
-                        @endforeach -->
-
                     </div>
                 </div>
                 <?php
@@ -61,9 +56,9 @@ use App\Http\Tools\Gc7;
 
 <script>
     window.addEventListener('DOMContentLoaded', (event) => {
-        // $('.ui.dropdown').mouseover (function(){
-        //     $('.ui.dropdown').dropdown({on:'hover'});
-        // });
-        $('.ui.dropdown').dropdown();
+        $('.ui.dropdown').mouseover (function(){
+            $('.ui.dropdown').dropdown({on:'hover'});
+        });
+        // $('.ui.dropdown').dropdown();
     });
 </script>
