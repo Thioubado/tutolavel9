@@ -1,3 +1,7 @@
+<?php
+use App\Http\Tools\Gc7;
+?>
+
 @foreach ($menus as $menu)
     {{--
     {{ $menu['owner'] }}
@@ -6,29 +10,43 @@
 
     <div class="ui {{ $menu['color'] }} three inverted menu">
         <div class="header item">
-            <a href="/" class="<?= is_active('') ?>">{{ $menu['owner'] }}</a>&nbsp;(@php echo ucfirst(env('APP_ENV', 'prod')); @endphp)
+            <a href="/" class="<?= isActive('') ?>">{{ $menu['owner'] }}</a>&nbsp;(@php echo ucfirst(env('APP_ENV', 'prod')); @endphp)
         </div>
         @foreach ($menu['pages'] as $uri => $page)
             {{-- {{$loop->iteration}} --}}
             @php
-            if ($uri=='qrcode') {
+            if ($uri=='gc7qrcode') {
                 ?>
-                <div class="ui dropdown">
+                <div class="ui dropdown" id="dropdownMenu">
                     <input type="hidden" name="QrCode">
-                    <span class="item active">
+                    <span class="item <?= isActive('') ?>">
                         <i class="qrcode icon"></i>
                     </span>
                     <div class="menu">
-                        <div class="item" data-value="v1"><a href="./../../gc7qrcode" style="color:#333">Les QrCodes</a></div>
-                        <div class="item" data-value="v1"><a href="./../../gc7friends" style="color:#333">Friends</a></div>
-                        <div class="item" data-value="v1"><a href="./../../gc7qrcode/1" style="color:#333">1 - HTML JS Reader</a></div>
-                        <div class="item" data-value="v2"><a href="./../../gc7qrcode/2" style="color:#333">Version 2</a></div>
+                        <?php
+                        require_once ('./../app/Http/Tools/Gc7.php');
+                        // Gc7::aff($page);
+
+                        foreach ($page as $submenu => $link) {
+                        if ($submenu) echo '<optgroup label="'.$submenu.'" style="margin-left:7px"></optgroup>';
+
+                            foreach ($link as $uri => $item) {
+                                // echo $uri.' → '.$item;
+                                echo '<div class="item" data-value="v1"><a href="'.$uri.'" style="color:#333">'.$item.'</a></div>';
+                            }
+                        }
+
+                         ?>
+                        <!-- @foreach ($page as $submenu => $linkk)
+                        <?php if ($submenu??null) echo 'ok'; ?>
+                        @endforeach -->
+
                     </div>
                 </div>
                 <?php
             } else{
                 ?>
-                <a href="<?= ROOT . $uri ?>" class="item<?= is_active($uri) ?>"><?= $page ?></a>
+                <a href="<?= ROOT . $uri ?>" class="item<?= isActive($uri) ?>"><?= $page ?></a>
                 <?php
             }
             @endphp
@@ -43,8 +61,9 @@
 
 <script>
     window.addEventListener('DOMContentLoaded', (event) => {
-        $('.ui.dropdown').mouseover (function(){
-            $('.ui.dropdown').dropdown({on:'hover'});
-        });
+        // $('.ui.dropdown').mouseover (function(){
+        //     $('.ui.dropdown').dropdown({on:'hover'});
+        // });
+        $('.ui.dropdown').dropdown();
     });
 </script>

@@ -1,6 +1,8 @@
 <?php
 namespace App\Http\Controllers;
 
+use App\Models\Gc7Friend;
+
 /**
  * IMPORTANT:.QR Code Reader:
  * https://github.com/mebjas/html5-qrcode.
@@ -41,13 +43,26 @@ class Gc7QrcodeController extends Controller {
 		return view('gc7pages.qrcode', ['data' => $data ?? null]);
 	}
 
-	// public function qrcode1() {
-	// 	return view('gc7pages.qrcode1', ['data' => $data ?? null]);
-	// }
+    public function list() {
+		// Gc7::aff($friends);
+		$data = Gc7Friend::all();
 
-	// public function qrcode2() {
-	// 	$data = [1, 2, 3];
+		return view('gc7pages.friends', ['data' => $data]);
+	}
 
-	// 	return view('gc7pages.qrcode2', ['data' => $data ?? null]);
-	// }
+    public function scanner1() {
+		$qrs = ['andy', 'grcote7', 'gugu', 'jpb11', 'momo', 'thr59', 'c7fr'];
+
+		foreach ($qrs as $k => $qr) {
+			if ($k > 2) {
+				$qrcode = new QrReader('./../public/assets/img/qr-' . $qr . '.png');
+				$text   = $qrcode->text(); // return decoded text from QR Code
+				$data[] = ucfirst($qr) . ' → ' . $text;
+			}
+		}
+
+		Gc7::aff($data, '$data');
+
+		return view('gc7pages.qr11', ['data' => $data ?? '-']);
+	}
 }

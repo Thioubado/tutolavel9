@@ -128,8 +128,8 @@ Route::post('editpage', [UpdateController::class, 'showMeData']);
 // ///////////////////////////////////////// GC7 ////////////////////////////////////////////
 
 Route::get('gc7users', [Gc7UsersController::class, 'index']);
-Route::get('gc7friends', [Gc7FriendsController::class, 'list']);
+Route::get('gc7qrfriends', [Gc7QrcodeController::class, 'list']);
 Route::get('gc7qrcode/{id?}', [Gc7QrcodeController::class, 'index'])->name('qrcode');
-Route::get('gc7qr2', [Gc7Qr2Controller::class, 'index']);
+Route::get('gc7qr11', [Gc7QrcodeController::class, 'scanner1']);
 Route::get('api/friend/{username}', [Gc7ApiFriendController::class, 'friend']);
 Route::get('gc7test', [Gc7TestController::class, 'test']);

@@ -100,5 +100,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
     //     btn.onclick = () => (modals[ind].style.display = 'block');
     // });
 
+    const dropdownMenu = document.getElementById('dropdownMenu')
+    dropdownMenu.click();
+    console.log( dropdownMenu );
+
 })
 console.log('Ready 2022 app.js public.')

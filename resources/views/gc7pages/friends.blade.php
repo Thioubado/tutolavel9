@@ -12,7 +12,7 @@
 
         <thead>
             <tr>
-                <th style="width: 100px;">User</th>
+                <th style="width: 100px;">Friend</th>
                 <th>QrCode</th>
             </tr>
         </thead>
