@@ -8,9 +8,10 @@ if (!defined('ROOT')) {
 
 // echo URI;
 function isActive($page) {
-	DebugBarGc7::addMessage(strtolower(substr(URI, 0, 5)), 'URI: ' . strtolower(substr(URI, 0, 5)));
+	// DebugBarGc7::addMessage(substr($page, 0, 5), 'URI: ' . substr(URI, 0, 5));
 
-	return strtolower(substr($page, 0, 5)) == strtolower(substr(URI, 0, 5)) ? ' active' : '';
+    DebugBarGc7::addMessage(substr($page, 0, 5), 'Page');
+	return (substr($page, 0, 5) == substr(URI, 0, 5) || substr($page, 0, 5)=='gc7qr') ? ' active' : '';
 }
 DebugBarGc7::addMessage(URI, 'URI');
 
@@ -22,15 +23,15 @@ $menus = [
 			'gc7users'  => 'Users',
 			'gc7qrcode' => [
 				'' => [
-					ROOT.'gc7qrcode'          => 'QrCode',
-					ROOT.'api/friend/grcote7' => 'GrCOTE7',
+					'gc7qrcode'          => 'QrCode',
+					'api/friend/grcote7' => 'GrCOTE7',
 				],
 				'Generators' => [
-					ROOT.'gc7qrfriends' => 'Friends',
+					'gc7qrfriends' => 'Friends',
 				],
 				'Scanners' => [
-					ROOT.'gc7qrcode/1' => 'Qr1',
-					ROOT.'gc7qrcode/2' => 'Qr2',
+					'gc7qrcode/1' => 'Qr1',
+					'gc7qrcode/2' => 'Qr2',
 				],
 			],
 			'gc7test' => 'Test',

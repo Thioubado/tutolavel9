@@ -24,33 +24,24 @@ use App\Models\Gc7Friend;
  */
 class Gc7QrcodeController extends Controller {
 	public function index($id = null) {
-		// './../resources/img/qrcode_mplionel.png');
 		$data = $id;
 
-		// return view('gc7pages.qrcode', ['data' => $data]);
-
+		$view = 'qrcode';
 		if ($id) {
-			$view = 'qrcode' . $id;
-
-			// return $this->{$function}();
-			return view('gc7pages.' . $view, ['data' => $data ?? null]);
+			$view .= $id;
 		}
 
-		return $this->default();
+		return view('gc7pages.' . $view, ['data' => $data ?? null]);
 	}
 
-	public function default() {
-		return view('gc7pages.qrcode', ['data' => $data ?? null]);
-	}
-
-    public function list() {
+	public function list() {
 		// Gc7::aff($friends);
 		$data = Gc7Friend::all();
 
 		return view('gc7pages.friends', ['data' => $data]);
 	}
 
-    public function scanner1() {
+	public function scanner1() {
 		$qrs = ['andy', 'grcote7', 'gugu', 'jpb11', 'momo', 'thr59', 'c7fr'];
 
 		foreach ($qrs as $k => $qr) {
@@ -63,6 +54,6 @@ class Gc7QrcodeController extends Controller {
 
 		Gc7::aff($data, '$data');
 
-		return view('gc7pages.qr11', ['data' => $data ?? '-']);
+		return view('gc7pages.qrcode2', ['data' => $data ?? '-']);
 	}
 }

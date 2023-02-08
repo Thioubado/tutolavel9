@@ -19,7 +19,7 @@ use App\Http\Tools\Gc7;
                 ?>
                 <div class="ui dropdown" id="dropdownMenu">
                     <input type="hidden" name="QrCode">
-                    <span class="item <?= isActive('') ?>">
+                    <span class="item<?= isActive($uri) ?>">
                         <i class="qrcode icon"></i>
                     </span>
                     <div class="menu">
@@ -32,7 +32,8 @@ use App\Http\Tools\Gc7;
 
                             foreach ($link as $uri => $item) {
                                 // echo $uri.' → '.$item;
-                                echo '<div class="item" data-value="v1"><a href="'.$uri.'" style="color:#333">'.$item.'</a></div>';
+                                $selected = ($uri==URI) ? 'active':'';
+                                echo '<div class="item '.$selected.'" data-value="'.$uri.'"><a href="'.ROOT.$uri.'" style="color:#333">'.$item.'</a></div>';
                             }
                         }
                          ?>
@@ -59,6 +60,6 @@ use App\Http\Tools\Gc7;
         $('.ui.dropdown').mouseover (function(){
             $('.ui.dropdown').dropdown({on:'hover'});
         });
-        // $('.ui.dropdown').dropdown();
+        $('.ui.dropdown').dropdown();
     });
 </script>

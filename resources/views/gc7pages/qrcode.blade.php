@@ -7,16 +7,19 @@
 @section('main')
     <h1>QrCode Page</h1><br>
 
-    <p>The Frends page get a QrCode for a person</p>
+    <p>The Friends page get a QrCode for a person in a list</p>
 
     <hr><br>
 
     <p>Please choose another menu link in the main menu above (<i class='qrcode icon'>) </i> <i class="smile outline icon"></i></p>
     <hr>
-    NB:
-    <ul>
-        <li>Qr scanners in work</li>
-    </ul>
+    NB: Qr scanners list in working
+    <ol>
+        <li>HTML-5 JS: JS librairy with several troubles - I.e.:<br>
+        Scan only some QR Codes - Extremly memory greedy</li>
+        <br>
+        <li>In work</li>
+    </ol>
 
-    <p>$data (uri) = null</p>
+    <p>$data (uri) = {{$data ?? 'Root'}}</p>
 @endsection
