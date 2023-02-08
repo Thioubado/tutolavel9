@@ -15,8 +15,7 @@
     <hr>
     NB:
     <ul>
-        <li>Qr readers : Links 1 to 9</li>
-        <li>Qr scanners: Links 11 to 19</li>
+        <li>Qr scanners in work</li>
     </ul>
 
     <p>$data (uri) = null</p>

@@ -1,12 +1,12 @@
 @extends ('gc7layouts.main')
 
 @section('title')
-    QrCode11
+    QrCode2
 @endsection
 
 @section('main')
-    <h1>QrCode11 Page</h1>
-    <p>First Scanner (HTML -JS</p>
+    <h1>QrCode2 Page 2</h1>
+    <p>Second Codes Scanner</p>
 
     <div id="scanner">
         <input type="file" id="qr-input-file" accept="image/*" capture="environment">

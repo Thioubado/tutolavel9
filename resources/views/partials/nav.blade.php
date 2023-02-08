@@ -22,15 +22,15 @@ $menus = [
 			'gc7users'  => 'Users',
 			'gc7qrcode' => [
 				'' => [
-					'gc7qrcode'          => 'QrCode',
-					'api/friend/grcote7' => 'GrCOTE7',
+					ROOT.'gc7qrcode'          => 'QrCode',
+					ROOT.'api/friend/grcote7' => 'GrCOTE7',
 				],
 				'Generators' => [
-					'gc7qrfriends' => 'Friends',
+					ROOT.'gc7qrfriends' => 'Friends',
 				],
 				'Scanners' => [
-					'gc7qr1' => 'Qr1',
-					'gc7qr2' => 'Qr2',
+					ROOT.'gc7qrcode/1' => 'Qr1',
+					ROOT.'gc7qrcode/2' => 'Qr2',
 				],
 			],
 			'gc7test' => 'Test',
