@@ -70,8 +70,9 @@ use Barryvdh\Debugbar\Facades\Debugbar as DebugbarGc7;
         $('.ui.dropdown').mouseover (function(){
             $('.ui.dropdown').dropdown({on:'hover'})
         });
-        $('.ui.dropdown').dropdown()
-        
+        // For automatically show the dropdown
+        // $('.ui.dropdown').dropdown()
+
         const mainDropdownLink = document.getElementById('mainDropdownLink')
         if (<?php echo json_encode($activeMainLink??null); ?>) mainDropdownLink.classList.add('active')
     });
