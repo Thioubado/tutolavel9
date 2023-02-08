@@ -7,57 +7,27 @@
 @section('main')
     <h1>QrCode2 Page 2</h1>
     <p>Second Codes Scanner</p>
+    {{-- <p>https://packagist.org/packages/chillerlan/php-qrcode</p> --}}
 
-    <div id="scanner">
-        <input type="file" id="qr-input-file" accept="image/*" capture="environment">
-        <br>
-        Result
-        <div id="qr-data" style="width: 600px"></div>
+    {{-- //2see https://github.com/chillerlan/js-qrcode --}}
 
-        <div id="reader"></div>
-        <!--
-            <div id="reader-top-container" style="position: relative;">
-                <div id="reader-container">
-                </div>
-            </div>
-            <div class="empty"></div>
-            -->
-    </div>
-    <p>Data:<br>
-        @php
-            use App\Http\Tools\Gc7;
-            Gc7::aff($data);
+    {{-- {{ $data }} --}}
 
-            // foreach ($data as $k => $v) {
-            //     echo $k . ' ' . $v . '<br>';
-            // }
-        @endphp
-    </p>
+    @php
+        echo $data;
+    @endphp
 
-    <script>
-        const html5QrCode = new Html5Qrcode( /* element id */ "reader");
-        // File based scanning
-        const fileinput = document.getElementById('qr-input-file');
-        const qrdata = document.getElementById('qr-data');
-        fileinput.addEventListener('change', e => {
-            if (e.target.files.length == 0) {
-                // No file selected, ignore
-                return;
-            }
-            const imageFile = e.target.files[0];
-            // Scan QR Code
-            html5QrCode.scanFile(imageFile, true)
-                .then(decodedText => {
-                    // success, use decodedText
-                    qrdata.innerHTML = decodedText
-                    console.log(decodedText);
+<script type="module">
+	import {QRCode} from './dist/js-qrcode-es6-src.js';
 
-                    window.open(decodedText, "_self")
-                })
-                .catch(err => {
-                    // failure, handle it.
-                    console.log(`Error scanning file. Reason: ${err}`)
-                });
-        });
-    </script>
+	// an SVG image as base64 data URI will be returned by default
+	let qrcode = (new QRCode()).render('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
+
+	// append it to the DOM
+	let img = document.createElement('img');
+	img.alt = 'QRCode';
+	img.src = qrcode
+
+	document.getElementById('qrcode-container').appendChild(img);
+</script>
 @endsection

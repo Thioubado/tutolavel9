@@ -1,11 +1,14 @@
 <?php
 namespace App\Http\Controllers;
 
+use Zxing\QrReader;
+use App\Http\Tools\Gc7;
 use App\Models\Gc7Friend;
+use chillerlan\QRCode\QRCode;
 
 /**
- * IMPORTANT:.QR Code Reader:
- * 
+ * IMPORTANT:.QR Code Reader:.
+ *
  * 1/ https://github.com/mebjas/html5-qrcode.
  *
  * Other resources:
@@ -29,6 +32,10 @@ use App\Models\Gc7Friend;
 class Gc7QrcodeController extends Controller {
 	public function index($id = null) {
 		$data = $id;
+
+		if (2 == $id) {
+			$data = $this->scanner2();
+		}
 
 		$view = 'qrcode';
 		if ($id) {
@@ -56,8 +63,26 @@ class Gc7QrcodeController extends Controller {
 			}
 		}
 
-		Gc7::aff($data, '$data');
+		// Gc7::aff($data, '$data');
 
 		return view('gc7pages.qrcode2', ['data' => $data ?? '-']);
+	}
+
+	public function scanner2() {
+		$data = 'otpauth://totp/test?secret=B3JX4VCVJDVNXNZ5&issuer=chillerlan.net';
+
+		// quick and simple:
+		$data = '1/ Generate QR Code<br><img src="' . (new QRCode())->render($data) . '" alt="QR Code" width="200" />';
+
+		// Gc7::aff($data, '$data');
+
+		// $qrc = new QRCode();
+		// $qrc->readFromFile('./public/assets/img/qr-andy.png');
+		// Gc7::aff($qrc);
+
+        $qrcode = new QrReader('./../public/assets/img/qr-andy.png');
+        $data = $qrcode->text(); //return decoded text from QR Code
+
+		return 'QR Code decoder<br>:'.$data;
 	}
 }
