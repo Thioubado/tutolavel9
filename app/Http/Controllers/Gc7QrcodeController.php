@@ -5,7 +5,11 @@ use App\Models\Gc7Friend;
 
 /**
  * IMPORTANT:.QR Code Reader:
- * https://github.com/mebjas/html5-qrcode.
+ * 
+ * 1/ https://github.com/mebjas/html5-qrcode.
+ *
+ * Other resources:
+ * https://packagist.org/?query=qrcode%20reader
  *
  * Capturing image: https://web.dev/media-capturing-images
  *
