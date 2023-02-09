@@ -32,16 +32,16 @@ use Zxing\QrReader;
  */
 class Gc7QrcodeController extends Controller {
 	public function index($id = null) {
-		$data = $id;
+        $view = 'qrcode';
+		$nbScanners = 3;
 
-		if (2 == $id) {
-			$data = $this->scanner2();
+		if (in_array($id, range(1,$nbScanners))) {
+            echo $id;
+            $methodToCall ='scanner'.$id;
+			$data = $this->{$methodToCall}();
+            $view .= $id;
 		}
 
-		$view = 'qrcode';
-		if ($id) {
-			$view .= $id;
-		}
 
 		return view('gc7pages.' . $view, ['data' => $data ?? null]);
 	}
@@ -54,19 +54,18 @@ class Gc7QrcodeController extends Controller {
 	}
 
 	public function scanner1() {
-		$qrs = ['andy', 'grcote7', 'gugu', 'jpb11', 'momo', 'thr59', 'c7fr'];
+		// $qrs = ['andy', 'grcote7', 'gugu', 'jpb11', 'momo', 'thr59', 'c7fr'];
 
-		foreach ($qrs as $k => $qr) {
-			if ($k > 2) {
-				$qrcode = new QrReader('./../public/assets/img/qr-' . $qr . '.png');
-				$text   = $qrcode->text(); // return decoded text from QR Code
-				$data[] = ucfirst($qr) . ' → ' . $text;
-			}
-		}
+		// foreach ($qrs as $k => $qr) {
+		// 	if ($k > 2) {
+		// 		$qrcode = new QrReader('./../public/assets/img/qr-' . $qr . '.png');
+		// 		$text   = $qrcode->text(); // return decoded text from QR Code
+		// 		$data[] = ucfirst($qr) . ' → ' . $text;
+		// 	}
+		// }
 
 		// Gc7::aff($data, '$data');
-
-		return view('gc7pages.qrcode2', ['data' => $data ?? '-']);
+        return 1;
 	}
 
 	public function scanner2() {

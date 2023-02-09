@@ -5,11 +5,14 @@ use App\Models\Membre;
 
 class Gc7TestController extends Controller {
 	public function test() {
-		$data   = range(1, 3);
+		$data   = [1.. 5];
 
 		if (in_array(2, $data, true)) {
 			$data = 'Match found<br>';
 		}
+        // define('URI', substr($_SERVER['REQUEST_URI'] ?? '/', 1));
+        $data = URI;
+
         return view('gc7pages.test', ['data' => $data ?? []]);
 
 	}

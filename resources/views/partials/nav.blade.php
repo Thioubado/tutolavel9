@@ -1,6 +1,6 @@
 <?php
 // define('URI', substr($_SERVER['PATH_INFO'] ?? '/', 1));
-define('URI', substr($_SERVER['REQUEST_URI'] ?? '/', 1));
+// define('URI', substr($_SERVER['REQUEST_URI'] ?? '/', 1));
 use Barryvdh\Debugbar\Facades\Debugbar as DebugbarGc7;
 
 if (!defined('ROOT')) {

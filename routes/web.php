@@ -1,5 +1,8 @@
 <?php
 
+define('URI', substr($_SERVER['REQUEST_URI'] ?? '/', 1));
+// View::share('URI', Config::get('constants.URI'));
+
 use App\Http\Controllers\CreateController;
 use App\Http\Controllers\DeleteController;
 // call the submit form controller
@@ -7,8 +10,6 @@ use App\Http\Controllers\FormValidationController;
 // call the form validation
 
 use App\Http\Controllers\Gc7ApiFriendController;
-use App\Http\Controllers\Gc7FriendsController;
-use App\Http\Controllers\Gc7Qr2Controller;
 use App\Http\Controllers\Gc7QrcodeController;
 // call the controller userwithmodel;
 use App\Http\Controllers\Gc7TestController;
@@ -125,11 +126,10 @@ Route::get('delete/{id}', [UpdateController::class, 'deleteForUpdate']);
 Route::get('editpage/{id}', [UpdateController::class, 'editforDB']);
 Route::post('editpage', [UpdateController::class, 'showMeData']);
 
-// ///////////////////////////////////////// GC7 ////////////////////////////////////////////
+// /////////////////////////////////////// GC7 ///////////////////////////////////////
 
 Route::get('gc7users', [Gc7UsersController::class, 'index']);
 Route::get('gc7qrfriends', [Gc7QrcodeController::class, 'list']);
 Route::get('gc7qrcode/{id?}', [Gc7QrcodeController::class, 'index'])->name('qrcode');
-Route::get('gc7qr11', [Gc7QrcodeController::class, 'scanner1']);
 Route::get('api/friend/{username}', [Gc7ApiFriendController::class, 'friend']);
 Route::get('gc7test', [Gc7TestController::class, 'test']);
