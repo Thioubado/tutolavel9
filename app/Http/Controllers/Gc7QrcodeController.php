@@ -1,13 +1,15 @@
 <?php
 namespace App\Http\Controllers;
 
-use Zxing\QrReader;
 use App\Http\Tools\Gc7;
 use App\Models\Gc7Friend;
 use chillerlan\QRCode\QRCode;
+use Zxing\QrReader;
 
 /**
  * IMPORTANT:.QR Code Reader:.
+ *
+ * 2see https://github.com/zxing/zxing
  *
  * 1/ https://github.com/mebjas/html5-qrcode.
  *
@@ -17,7 +19,6 @@ use chillerlan\QRCode\QRCode;
  * Capturing image: https://web.dev/media-capturing-images
  *
  * Generate QRCode : https://www.qrcode-monkey.com/fr.
- *
  *
  * Script pour generer QR Code
  *
@@ -76,14 +77,14 @@ class Gc7QrcodeController extends Controller {
 
 		// Gc7::aff($data, '$data');
 
-        // // Very bad decoder
+		// // Very bad decoder
 		// $qrc = new QRCode();
 		// $qrc->readFromFile('./../public/assets/img/qr-andy.png');
 		// Gc7::aff($qrc);
 
-        $qrcode = new QrReader('./../public/assets/img/qr-andy.png');
-        $data = $qrcode->text(); //return decoded text from QR Code
+		$qrcode = new QrReader('./../public/assets/img/qr-andy.png');
+		$data   = $qrcode->text(); // return decoded text from QR Code
 
-		return 'QR Code decoder:<br>'.$data;
+		return 'QR Code decoder:<br>' . $data;
 	}
 }
