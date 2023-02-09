@@ -11,10 +11,13 @@ use Zxing\QrReader;
  *
  * 2see https://github.com/zxing/zxing
  *
- *Android Studio Tutorial
- *https://www.youtube.com/playlist?list=PLaoF-xhnnrRWHtmb8ZGmu8N4Wl2Zr26V7
+ * Android Studio Tutorial
+ * https://www.youtube.com/playlist?list=PLaoF-xhnnrRWHtmb8ZGmu8N4Wl2Zr26V7
  *
- *Android Development Tutorial - Read QR Code with ZXing
+ * Android Development Tutorial - Read QR Code with ZXing
+ *
+ * https://www.google.com/search?q=tuto+zxing&oq=tuto+zxing&aqs=chrome..69i57.5825j0j1&sourceid=chrome&ie=UTF-8
+ *
  * https://www.youtube.com/watch?v=MegowI4T_L8
  *
  * 1/ https://github.com/mebjas/html5-qrcode.
