@@ -13,9 +13,9 @@
         echo $data;
     @endphp
 
-<script type="module">
-window.addEventListener('DOMContentLoaded', (event) => {
-    console.log('Ready for Zxing')
-})
-</script>
+    <script type="module">
+        window.addEventListener('DOMContentLoaded', (event) => {
+        console.log('Ready for Zxing')
+        })
+    </script>
 @endsection
