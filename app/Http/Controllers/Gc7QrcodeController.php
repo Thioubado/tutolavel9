@@ -32,16 +32,15 @@ use Zxing\QrReader;
  */
 class Gc7QrcodeController extends Controller {
 	public function index($id = null) {
-        $view = 'qrcode';
+		$view       = 'qrcode';
 		$nbScanners = 3;
 
-		if (in_array($id, range(1,$nbScanners))) {
-            echo $id;
-            $methodToCall ='scanner'.$id;
-			$data = $this->{$methodToCall}();
-            $view .= $id;
+		if (in_array($id, range(1, $nbScanners))) {
+			// echo $id;
+			$methodToCall = 'scanner' . $id;
+			$data         = $this->{$methodToCall}();
+			$view .= $id;
 		}
-
 
 		return view('gc7pages.' . $view, ['data' => $data ?? null]);
 	}
@@ -65,7 +64,7 @@ class Gc7QrcodeController extends Controller {
 		// }
 
 		// Gc7::aff($data, '$data');
-        return 1;
+		return 1;
 	}
 
 	public function scanner2() {
@@ -83,6 +82,12 @@ class Gc7QrcodeController extends Controller {
 
 		$qrcode = new QrReader('./../public/assets/img/qr-andy.png');
 		$data   = $qrcode->text(); // return decoded text from QR Code
+
+		return 'QR Code decoder:<br>' . $data;
+	}
+
+	public function scanner3() {
+		$data = 'Third QR Reader';
 
 		return 'QR Code decoder:<br>' . $data;
 	}
