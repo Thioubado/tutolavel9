@@ -5,9 +5,13 @@ use App\Models\Membre;
 
 class Gc7TestController extends Controller {
 	public function test() {
-		$data = [1, 2, 3];
+		$data   = range(1, 3);
 
-		return view('gc7pages.test', ['data' => $data ?? []]);
+		if (in_array(2, $data, true)) {
+			$data = 'Match found<br>';
+		}
+        return view('gc7pages.test', ['data' => $data ?? []]);
+
 	}
 
 	public function pairs() {
