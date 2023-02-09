@@ -36,9 +36,9 @@
     </main>
 
     <hr>
-    <footer>
-        Footer Semantic
-    </footer>
+    
+    @include ('partials.footer')
+    
 </body>
 
 </html>
