@@ -23,9 +23,19 @@
     </script>
 
 <h1>Scan from WebCam:</h1>
-<div id="video-container">
-    <video id="qr-video"></video>
+<div id="video-container" style="text-align:center">
+    <video id="qr-video" width="77%"></video>
 </div>
+
+<b>Detected QR code: </b>
+<span id="cam-qr-result">None</span>
+<br>
+<b>Last detected at: </b>
+<span id="cam-qr-result-timestamp"></span>
+<br>
+<button id="start-button">Start</button>
+<button id="stop-button">Stop</button>
+
 <div>
     <label>
         Highlight Style
@@ -63,15 +73,6 @@
 <div>
     <button id="flash-toggle">📸 Flash: <span id="flash-state">off</span></button>
 </div>
-<br>
-<b>Detected QR code: </b>
-<span id="cam-qr-result">None</span>
-<br>
-<b>Last detected at: </b>
-<span id="cam-qr-result-timestamp"></span>
-<br>
-<button id="start-button">Start</button>
-<button id="stop-button">Stop</button>
 <hr>
 
 <h1>Scan from File:</h1>
@@ -82,7 +83,7 @@
 <!--<script src="../qr-scanner.umd.min.js"></script>-->
 <!--<script src="../qr-scanner.legacy.min.js"></script>-->
 <script type="module">
-    import QrScanner from "../qr-scanner.min.js";
+    import QrScanner from "./../../assets/js/qr-scanner.min.js";
 
     const video = document.getElementById('qr-video');
     const videoContainer = document.getElementById('video-container');
