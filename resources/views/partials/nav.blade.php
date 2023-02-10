@@ -32,9 +32,9 @@ $menus = [
 				'Scanners' => [
 					'gc7qrcode/1' => 'Qr1',
 					'gc7qrcode/2' => 'Qr2',
-					'gc7qrcode/3' => 'Qr3',
-					'gc7qrcode/4' => 'Qr4',
-					'gc7qrcode/5' => 'Qr5 (QR-Scanner)',
+					'gc7qrcode/3' => 'Qr3 (QR-Scanner)',
+					'gc7qrcode/4' => 'Qr4 (Barcode)',
+					'gc7qrcode/5' => 'Qr5',
 				],
 			],
 			'gc7test' => 'Test',

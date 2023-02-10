@@ -6,7 +6,7 @@
 
 @section('main')
     <h1>QrCode4 Page</h1>
-    <p>Code Scanner (...)</p>
+    <p>Barcode Scanner (...)</p>
 
     @php
         echo $data;
@@ -14,7 +14,7 @@
 
     <script type="module">
         window.addEventListener('DOMContentLoaded', (event) => {
-        console.log('Ready for ...')
+        console.log('Ready for barcode')
         })
     </script>
 @endsection

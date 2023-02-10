@@ -109,9 +109,9 @@ class Gc7QrcodeController extends Controller {
 	}
 
 	public function scanner4() {
-		$data = '4th QR Reader';
+		$data = 'Here name of the librairy';
 
-		return 'QR Code 4decoder:<br>' . $data;
+		return 'Barcode decoder:<br>' . $data;
 	}
 
 	public function scanner5() {
