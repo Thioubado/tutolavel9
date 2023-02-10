@@ -9,7 +9,15 @@ use Zxing\QrReader;
 /**
  * IMPORTANT:.QR Code Reader:.
  *
- * 2see https://github.com/zxing/zxing
+ * Last solution: Seems to read all
+ *
+ * @! https://github.com/nimiq/qr-scanner
+ * https://nimiq.github.io/qr-scanner/demo/
+ *
+ * https://github.com/zxing/zxing
+ * Trouble: In chinese
+ * 1st solution - https://www.tabnine.com/code/java/packages/com.king.zxing
+ * Langage: Java
  *
  * Android Studio Tutorial
  * https://www.youtube.com/playlist?list=PLaoF-xhnnrRWHtmb8ZGmu8N4Wl2Zr26V7
@@ -41,11 +49,10 @@ use Zxing\QrReader;
  */
 class Gc7QrcodeController extends Controller {
 	public function index($id = null) {
-		$view       = 'qrcode';
-		$nbScanners = 3;
+		$nbScanners = 5;
 
 		if (in_array($id, range(1, $nbScanners))) {
-			// echo $id;
+			$view         = 'qrcode';
 			$methodToCall = 'scanner' . $id;
 			$data         = $this->{$methodToCall}();
 			$view .= $id;
@@ -99,5 +106,15 @@ class Gc7QrcodeController extends Controller {
 		$data = 'Third QR Reader';
 
 		return 'QR Code decoder:<br>' . $data;
+	}
+
+	public function scanner4() {
+		$data = '4th QR Reader';
+
+		return 'QR Code 4decoder:<br>' . $data;
+	}
+
+	public function scanner5() {
+		return 1;
 	}
 }

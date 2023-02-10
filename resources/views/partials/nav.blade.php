@@ -10,7 +10,7 @@ if (!defined('ROOT')) {
 // echo URI;
 function isActive($page) {
 
-    // DebugBarGc7::addMessage(substr($page, 0, 5), 'Page');
+    DebugBarGc7::addMessage(substr($page, 0, 5), 'Page');
 	return $page == URI  ? ' active' : '';
 }
 DebugBarGc7::addMessage(URI, 'URI');
@@ -33,6 +33,8 @@ $menus = [
 					'gc7qrcode/1' => 'Qr1',
 					'gc7qrcode/2' => 'Qr2',
 					'gc7qrcode/3' => 'Qr3',
+					'gc7qrcode/4' => 'Qr4',
+					'gc7qrcode/5' => 'Qr5 (QR-Scanner)',
 				],
 			],
 			'gc7test' => 'Test',
