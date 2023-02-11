@@ -34,11 +34,11 @@
         @foreach($membres as $membre)
 
         <tr>
-            <td style="text-align:right">{{$membre['id']}}</td>
-            <td><strong>{{$membre['pseudo']}}</strong></td>
-            <td>{{$membre['nom']}}</td>
-            <td>{{$membre['prenom']}}</td>
-            <td><i class="{{$membre['pays']}} flag"></i> {{$membre['adresse']}}</td>
+            <td style="text-align:right">{{$membre['id']??'id'}}</td>
+            <td><strong>{{$membre['pseudo']??'pseudo'}}</strong></td>
+            <td>{{$membre['nom']??'nom'}}</td>
+            <td>{{$membre['prenom']??'prenom'}}</td>
+            <td><i class="{{$membre['pays']??'pays'}} flag"></i> {{$membre['adresse']??'adresse'}}</td>
         </tr>
 
         @endforeach
