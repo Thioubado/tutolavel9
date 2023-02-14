@@ -41,13 +41,13 @@
                     <div class="header">
                         <h1>QrCode of {{ $friend->name }} ({{ $friend->username }})</h1>
                         <p style="color: blue; font-size:16px;">Take your phone and your QrCode 's application<br>
-                        Or use this link <a href="./../../gc7qrcode">QrCode Page</a><br>
+                        Or use this link <a href="./../../gc7qrcode1">QrCode Page</a><br>
                         ( If you have a webcam on your PC and can 'see' the QrCode on an other device <i class="smile outline icon"></i> ) </p>
                     </div>
                     <div class="image content modalimg">
                         <div class="ui medium image">
                             @php
-                                $qr = 'qr-' . strtolower($friend->username) . '.png';
+                                $qr = 'qr2-' . strtolower($friend->username) . '.svg';
                             @endphp
                             <img src="assets/img/{{ $qr }}" alt="QrCODE of {{ $friend->name }} alias {{ $friend->username }}">
                         </div>

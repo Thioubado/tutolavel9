@@ -26,4 +26,26 @@
     Gc7::aff($data, '$data');
 @endphp
 
+<div id="myQrcode"></div>
+
+<script src="assets/js/easy-qrcode.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+    window.addEventListener('DOMContentLoaded', (event) => {
+
+
+        const friends = ['']
+
+
+        var options = {
+            text: "https://qr.cote7.fr/api/friend/gugu",
+        };
+
+        const myQr = document.getElementById("myQrcode")
+        new QRCode(myQr, options);
+
+        // myQr.innerHTML = 'Oki'
+    })
+</script>
+
+
 @endsection
