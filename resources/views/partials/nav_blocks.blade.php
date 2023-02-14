@@ -49,20 +49,20 @@ use Barryvdh\Debugbar\Facades\Debugbar as DebugbarGc7;
                          ?>
                     </div>
                 </div>
-                <?php
-            } else{
+            <?php
+            } else {
                 ?>
                 <a href="<?= ROOT . $uri ?>" class="item<?= isActive($uri) ?>"><?= $page ?></a>
                 <?php
             }
-            @endphp
+        @endphp
 
-            @if ($loop->iteration % 7 > 5)
+        @if ($loop->iteration % 7 > 5)
             </div>
             <div class="ui {{ $menu['color'] }} three inverted menu">
-@endif
-@endforeach
-</div>
+        @endif
+    @endforeach
+    </div>
 @endforeach
 
 <script>
