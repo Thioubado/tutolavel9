@@ -12,14 +12,14 @@
 
     @if (env('APP_ENV')=='prod')
         <link rel="stylesheet" href='<?= ROOT ?>public/assets/css/semantic.min.css'>
-        <link rel="stylesheet" href='<?= ROOT ?>public/assets/css/app.css'>
+        <link rel="stylesheet" href='<?= ROOT ?>public/assets/css/app.min.css'>
         <script src='<?= ROOT ?>public/assets/js/jquery363.min.js'></script>
         <script src='<?= ROOT ?>public/assets/js/semantic.min.js'></script>
         <script src='<?= ROOT ?>public/assets/js/app.js'></script>
     @else
     @vite([
         './public/assets/css/semantic.min.css',
-        './public/assets/css/app.css',
+        './public/assets/css/app.min.css',
         './public/assets/js/jquery363.min.js',
         './public/assets/js/semantic.min.js',
         './public/assets/js/app.js'
@@ -36,9 +36,9 @@
     </main>
 
     <hr>
-    
+
     @include ('partials.footer')
-    
+
 </body>
 
 </html>
