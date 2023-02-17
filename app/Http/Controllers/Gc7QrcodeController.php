@@ -49,10 +49,10 @@ use Zxing\QrReader;
  */
 class Gc7QrcodeController extends Controller {
 	public function index($id = null) {
+		$view       = 'qrcode';
 		$nbScanners = 5;
 
 		if (in_array($id, range(1, $nbScanners))) {
-			$view         = 'qrcode';
 			$methodToCall = 'scanner' . $id;
 			$data         = $this->{$methodToCall}();
 			$view .= $id;

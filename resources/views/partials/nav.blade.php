@@ -10,7 +10,7 @@ if (!defined('ROOT')) {
 // echo URI;
 function isActive($page) {
 
-    DebugBarGc7::addMessage(substr($page, 0, 5), 'Page');
+    // DebugBarGc7::addMessage(substr($page, 0, 5), 'Page');
 	return $page == URI  ? ' active' : '';
 }
 DebugBarGc7::addMessage(URI, 'URI');
