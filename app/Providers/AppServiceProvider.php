@@ -20,7 +20,7 @@ class AppServiceProvider extends ServiceProvider {
 	 */
 	public function boot() {
 		Blade::directive('laravelVersion', function () {
-			return '<?php echo app()->version(); ?>';
+			return '<?php Application::VERSION ?>';
 		});
 	}
 }
