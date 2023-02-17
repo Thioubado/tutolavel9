@@ -34,7 +34,7 @@ use Barryvdh\Debugbar\Facades\Debugbar as DebugbarGc7;
                         // Gc7::aff($page);
 
                         foreach ($page as $submenu => $link) {
-                            if ($submenu) echo '<optgroup label="'.$submenu.'" style="margin-left:7px"></optgroup>';
+                            // if ($submenu) echo '<optgroup label="'.$submenu.'" style="margin-left:7px"></optgroup>';
 
                             foreach ($link as $uri => $item) {
                                 $selected='';
