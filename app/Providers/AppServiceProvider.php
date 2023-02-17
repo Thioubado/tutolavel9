@@ -19,7 +19,7 @@ class AppServiceProvider extends ServiceProvider {
 	 * @return void
 	 */
 	public function boot() {
-		\Debugbar::disable();
+		// \Debugbar::disable();
 
 		Blade::directive('laravelVersion', function () {
 			return '<?= Application::VERSION ?>';
