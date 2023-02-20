@@ -46,7 +46,7 @@ use Barryvdh\Debugbar\Facades\Debugbar as DebugbarGc7;
                                 echo '<div class="item'.($selected??'').'" data-value="'.$uri.'"><a href="'.ROOT.$uri.'" style="color:#333">'.$item.'</a></div>';
                             }
                         }
-                         ?>
+                        ?>
                     </div>
                 </div>
             <?php
