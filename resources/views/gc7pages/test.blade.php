@@ -32,9 +32,7 @@
 <script type="text/javascript">
     window.addEventListener('DOMContentLoaded', (event) => {
 
-
         const friends = ['']
-
 
         var options = {
             text: "https://qr.cote7.fr/api/friend/gugu",
@@ -46,6 +44,5 @@
         // myQr.innerHTML = 'Oki'
     })
 </script>
-
 
 @endsection
