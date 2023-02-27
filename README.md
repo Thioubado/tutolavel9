@@ -15,7 +15,7 @@
     npm i
     ```
 
-4. Copy and complete *.env* from .*env_example*
+4. **Copy** and **complete** ***.env*** from ***.env_example***
 
 
 5. Migrations & seed:
