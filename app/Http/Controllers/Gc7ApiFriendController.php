@@ -11,6 +11,8 @@ class Gc7ApiFriendController extends Controller {
 
         $data = Gc7Friend::where('username', $username)->first();
 		// Gc7::aff($data);
+		
+		$data->country = strtolower($data->country);
 
 		return view('gc7pages.friend', ['friend' => $data]);
 	}
