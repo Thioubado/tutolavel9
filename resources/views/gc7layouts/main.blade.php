@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title') | QRC</title>
     <link rel="icon" href="<?= ROOT ?>favicon.ico" type="image/x-icon">
+    <link rel="icon" href="<?= ROOT ?>animated_favicon.gif" type="image/x-icon">
 
     @if (env('APP_ENV')=='prod')
         <link rel="stylesheet" href='<?= ROOT ?>public/assets/css/semantic.min.css'>
