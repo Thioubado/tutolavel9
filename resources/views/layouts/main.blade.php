@@ -18,7 +18,6 @@
 
 <body>
 
-    @include('partials.nav')
 
     <main>
         @yield('main')

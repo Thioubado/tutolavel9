@@ -2,7 +2,6 @@
 use App\Http\Tools\Gc7;
 use Barryvdh\Debugbar\Facades\Debugbar as DebugbarGc7;
 ?>
-
 @foreach ($menus as $menu)
     {{--
     {{ $menu['owner'] }}
