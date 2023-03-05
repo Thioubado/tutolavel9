@@ -1,3 +1,5 @@
+# QRC
+
 ## Local installation
 
 1. Fork the projet and clone this fork on your local server
@@ -24,12 +26,20 @@
     php .\artisan migrate:refresh --seed
     ```
 
-6. Enjoy !
+## Run the app
 
-## Upgrade Laravel 10
-
-https://blog.devgenius.io/how-to-upgrade-from-laravel-9-x-to-laravel-10-x-926b826b454f
-
+1. Front
+   
+    ```
+    npm run dev
+    ```
+2. Back
+   
+    ```
+    php artisan serve
+    ```
+3. Enjoy !
+   
 ----
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 

@@ -18,7 +18,6 @@
 
 <body>
 
-
     <main>
         @yield('main')
     </main>

@@ -1,0 +1,32 @@
+{
+    "root": {
+        "data": {
+            "id": "cqyh4hlgj9k0",
+            "created": 1678021914703,
+            "text": "QRC"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "cqyh4k7yfgw0",
+                    "created": 1678021920417,
+                    "text": "GitHub",
+                    "hyperlink": "https://github.com/c57fr/laravel10",
+                    "hyperlinkTitle": ""
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "cqyh4ttixio0",
+                    "created": 1678021941312,
+                    "text": "topic"
+                },
+                "children": []
+            }
+        ]
+    },
+    "template": "default",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}

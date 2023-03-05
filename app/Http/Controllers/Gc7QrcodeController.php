@@ -85,8 +85,9 @@ class Gc7QrcodeController extends Controller {
 
 	public function scanner2() {
 		$data = 'otpauth://totp/test?secret=B3JX4VCVJDVNXNZ5&issuer=chillerlan.net';
-		$data = 'http://qr.cote7.fr/api/friend/grcote7';
 		// quick and simple:
+
+		$data = 'http://qr.cote7.fr/api/friend/grcote7';
 		$data = '1/ Generate QR Code <strong>' . $data . '</strong><br><img src="' . (new QRCode())->render($data) . '" alt="QR Code" width="200" />';
 
 		// Gc7::aff($data, '$data');

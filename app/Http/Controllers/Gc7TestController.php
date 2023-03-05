@@ -1,4 +1,9 @@
 <?php
+
+/**
+ * (ɔ) Online FORMAPRO - GrCOTE7 - 2028
+ */
+
 namespace App\Http\Controllers;
 
 use App\Models\Membre;
@@ -10,7 +15,9 @@ class Gc7TestController extends Controller {
 		if (in_array(2, $data, true)) {
 			$data = 'Match found<br>';
 		}
-		$data .= URI;
+		// $data .= URI;
+
+		$data .= date('Y');
 
 		return view('gc7pages.test', ['data' => $data ?? []]);
 	}

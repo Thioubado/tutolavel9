@@ -1,14 +1,18 @@
 <?php
 
+/**
+ * (ɔ) Online FORMAPRO - GrCOTE7 - 2022-2023
+ */
+
 return (new PhpCsFixer\Config())
 	// https:// github.com/FriendsOfPHP/PHP-CS-Fixer/blob/master/doc/list.rst
 	->setRiskyAllowed(false)
 	->setRules([
-		// 'header_comment' => [
-		// 	'header'       => '(ɔ) Online FORMAPRO - GrCOTE7 -2022.',
-		// 	'comment_type' => 'PHPDoc',
-		// 	'location'     => 'after_declare_strict',
-		// ],
+		'header_comment' => [
+			'header'       => '(ɔ) Online FORMAPRO - GrCOTE7 - 2022-2023', // . date('Y'),
+			'comment_type' => 'PHPDoc',
+			'location'     => 'after_declare_strict',
+		],
 
 		'@PHP81Migration' => true,
 		'@PSR12'          => true,
