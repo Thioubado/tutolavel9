@@ -9,7 +9,7 @@ return (new PhpCsFixer\Config())
 	->setRiskyAllowed(false)
 	->setRules([
 		'header_comment' => [
-			'header'       => '(ɔ) Online FORMAPRO - GrCOTE7 - 2022-2023', // . date('Y'),
+			'header'       => '(ɔ) GrCOTE7 - 2022-2023', // . date('Y'),
 			'comment_type' => 'PHPDoc',
 			'location'     => 'after_declare_strict',
 		],

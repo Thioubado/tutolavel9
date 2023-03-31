@@ -23,11 +23,14 @@
 @php
     use App\Http\Tools\Gc7;
     // $data=$menus;
-    Gc7::aff($data, '$data');
+    // Gc7::aff($data, '$data');
 @endphp
 
 <div id="myQrcode"></div>
 
+{{ $data }}
+
+<!--
 <script src="assets/js/easy-qrcode.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
     window.addEventListener('DOMContentLoaded', (event) => {
@@ -44,5 +47,6 @@
         // myQr.innerHTML = 'Oki'
     })
 </script>
+-->
 
 @endsection
