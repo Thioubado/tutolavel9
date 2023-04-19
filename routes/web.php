@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * (ɔ) GrCOTE7 - 2022-2023
+ */
+
 define('URI', substr($_SERVER['REQUEST_URI'] ?? '/', 1));
 // View::share('URI', Config::get('constants.URI'));
 
