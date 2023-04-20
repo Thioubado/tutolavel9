@@ -12,7 +12,7 @@
         './public/assets/css/app.css',
         './public/assets/js/jquery363.min.js',
         './public/assets/js/semantic.min.js',
-        'resources/js/app.js'
+        'resources/js/bootstrap.js'
     ])
 </head>
 

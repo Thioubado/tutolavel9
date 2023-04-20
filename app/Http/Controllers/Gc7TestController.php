@@ -8,8 +8,10 @@ namespace App\Http\Controllers;
 
 use App\Http\Classes\PointGeo;
 
-class Gc7TestController extends Controller {
-	public function test() {
+class Gc7TestController extends Controller
+{
+	public function test()
+	{
 		$sseb  = new PointGeo(47.11863327026367, 5.363165855407715);
 		$losne = new PointGeo(47.098099500000004, 5.2642337);
 
@@ -18,7 +20,8 @@ class Gc7TestController extends Controller {
 		return view('gc7pages.test', ['data' => $data ?? []]);
 	}
 
-	public function distance(PointGeo $pt1, PointGeo $pt2) {
+	public function distance(PointGeo $pt1, PointGeo $pt2)
+	{
 		$earth_radius = 6371; // Rayon moyen de la Terre en kilomètres
 		$lat1         = deg2rad($pt1->lat);
 		$lng1         = deg2rad($pt1->lng);
